@@ -1,0 +1,45 @@
+ 
+  
+  #leaderboard {
+    text-align: center;
+    border-collapse: collapse;
+    border: 3px solid #e0e0e0;
+    border-color: transparent !important;
+    width: 50%;
+    background: #e0e0e0 !important;
+    box-shadow:  5px 5px 10px #bebebe,
+                 -5px -5px 10px #ffffff !important;
+  }
+  
+  #leaderboard td, #leaderboard th {
+    padding: 6px;
+    border-radius: 20px;
+  
+  }
+
+  @media screen and (max-width: 40em){
+    #leaderboard {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .responsiveTable tbody tr {
+        border: 3px solid #e0e0e0;
+        padding: .25em;
+    }
+}
+  
+  #leaderboard tr:hover {background-color: #e0e0e0 }
+  
+  #leaderboard th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #e0e0e0;
+    color: #4D4D4D !important;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+
+  }
+  
