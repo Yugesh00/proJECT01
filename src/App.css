@@ -36,15 +36,15 @@
 }
 
 .subSection1{
-  border-right: 2px solid red;
-  border-left: 2px solid red;
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
   border-radius: 2%;
   font-size: 20px;
 }
 
 .subSection2{
-  border-right: 2px solid red;
-  border-left: 2px solid red;
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
   border-radius: 2%;
   font-size: 20px;
 }
