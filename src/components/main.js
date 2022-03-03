@@ -26,6 +26,7 @@ const Main = () => {
         !! Welcome Friends in the world of DPBoss.net in INDIA. May you always Win. !!
          </marquee> 
       </div>
+      
       <div className='card luckySection'>
         <div className='elegant-color white-text card'>
           <span style={{fontWeight:'14px'}}>
