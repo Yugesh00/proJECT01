@@ -16,25 +16,25 @@ const Main = () => {
   return (
     <div className="App">  
       <header className="App-header ">
-      <div className='card headSection'>
+      <div className='card  headSection'>
         <span style={{fontWeight:'14px'}}>
           DPBoss.net
          </span>
       </div>
-       <div className='card welcomeSection'>
+       <div className='card elegant-color white-text  welcomeSection'>
         <marquee  direction="left" style={{fontWeight:'10px'}}>
         !! Welcome Friends in the world of DPBoss.net in INDIA. May you always Win. !!
          </marquee> 
       </div>
       <div className='card luckySection'>
-         <div>
+        <div className='elegant-color white-text card'>
           <span style={{fontWeight:'14px'}}>
           Today's Lucky Number
           </span>
          </div>
-         <div>
+         <div className='topMar1'>
          <Row >
-            <Col className='  subSection1' span={12}>
+            <Col className='subSection1' span={12}>
             <p> Golden Ank </p>
             <p>  Golden Ank </p> </Col>
           <Col className='  subSection2' span={12}>
@@ -44,14 +44,14 @@ const Main = () => {
          </div>
       </div>
       <div className='card liveResultSection'>
-         <div>
+         <div className='card elegant-color white-text'>
           <span style={{fontWeight:'14px'}}>
           Live Result
           </span>
          </div>
-         <div>
+         <div className='topMar1'>
          <Row >
-            <Col className='subSection1' span={24}>
+            <Col className='liveResultSubSection bottomPad' span={24}>
             <p> Golden Ank </p>
             <p>  312321 </p> 
             <button type="button"  className='btn-primary'>
@@ -60,7 +60,7 @@ const Main = () => {
               </p> 
            </button>
             </Col>
-          <Col className='  subSection2' span={24}>
+          <Col className='liveResultSubSection bottomPad' span={24}>
           <p>  Golden Ank  </p>
           <p> 1232</p>  
           <button type="button"  className='btn-primary'>
@@ -69,7 +69,7 @@ const Main = () => {
               </p> 
            </button>
           </Col>
-          <Col className='  subSection2' span={24}>
+          <Col className='liveResultSubSection bottomPad' span={24}>
           <p>  Golden Ank  </p>
           <p> 122 </p>  
           <button type="button"  className='btn-primary'>
@@ -82,7 +82,59 @@ const Main = () => {
          </div>
       </div>
       <br/>
-      
+
+      {/* WORLD ME SABSE FAST SATTA MATKA RESULT */}
+      <div className='card liveResultSection'>
+         <div className='card elegant-color white-text'>
+          <span style={{fontSize:'25px'}}>
+          WORLD ME SABSE FAST SATTA MATKA RESULT
+          </span>
+         </div>
+         <div className='topMar1 '>
+         <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+              <button type="button"  className='btn-primary'>
+                <p  style={{fontSize:'12px'}}>
+                Jodi
+                </p> 
+              </button>
+            </Col>
+          <Col className='' span={8}>
+              <p>  MADHURI  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+              <button type="button"  className='btn-primary'>
+                  <p  style={{fontSize:'12px'}}>
+                  Panel
+                  </p> 
+              </button>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+              <button type="button"  className='btn-primary'>
+                <p  style={{fontSize:'12px'}}>
+                Jodi
+                </p> 
+              </button>
+            </Col>
+          <Col className='' span={8}>
+              <p>  MADHURI  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+              <button type="button"  className='btn-primary'>
+                  <p  style={{fontSize:'12px'}}>
+                  Panel
+                  </p> 
+              </button>
+          </Col>
+        </Row>
+         </div>
+      </div> 
       </header> 
     </div>
   );

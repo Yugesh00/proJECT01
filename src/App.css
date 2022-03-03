@@ -49,6 +49,12 @@
   font-size: 20px;
 }
 
+.liveResultSubSection{ 
+  border-bottom: 1px solid #000;
+  border-radius: 0%;
+  font-size: 20px;
+}
+
 .liveResultSection{
   border-style: outset;
   margin-top: 5px;
@@ -70,6 +76,14 @@
  
 .rightPad{
   padding-right:20% !important;
+}
+ 
+.bottomPad{
+  padding-bottom:1% !important;
+}
+
+.topMar1{
+  margin-top:1% !important;
 }
  
 
