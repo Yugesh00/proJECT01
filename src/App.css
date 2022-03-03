@@ -10,6 +10,8 @@
   user-select: none;
 }
 
+ 
+
 .headSection{
   border-style: outset;
   padding: 1%;
@@ -64,8 +66,18 @@
 }
 
 .refreshBtn{
-  font-size: 15px;
-  padding:'12px' !important
+  background-color: #444444;
+  font-weight:500;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 2% !important;
 }
 
 .center{
@@ -98,11 +110,7 @@
   font-weight: 650;
   color:#4D4D4D;
 } */
-
-button:hover{
-  color:#FD5F07;
-}
-
+ 
  
 
 .typeBtn{
@@ -176,11 +184,7 @@ button:hover{
   }
 }
 
-button:active {
-  background: #e0e0e0;
-  box-shadow: inset 5px 5px 10px #bebebe,
-              inset -5px -5px 10px #ffffff;
-}
+ 
 
 .disBtn{
   background: #e0e0e0;
