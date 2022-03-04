@@ -5,6 +5,7 @@ import { MDBBtn } from "mdbreact";
 import {BrowserRouter as Router, Route, Link } from "react-router-dom";
 import audio from '../assests/onclick.mp3';
 import { Tabs, Row, Col  } from 'antd'; 
+import './table.css'
 const { TabPane } = Tabs;
 
 const Main = () => {
@@ -192,7 +193,8 @@ const Main = () => {
         </Row>
          </div>
       </div>
-      <table style={{width: '100%', textAlign:'center'}} className="panel-chart chart-table" cellpadding="2">
+      <div className='card'>
+      <table style={{width: '100%', textAlign:'center'}} className="leaderboard chart-table" cellpadding="2">
         <thead>
         <tr>
         <th>Mo</th>
@@ -748,7 +750,7 @@ const Main = () => {
           </tr>
           </tbody> 
 	       </table>  
- 
+         </div>
       </header> 
     </div>
   );
