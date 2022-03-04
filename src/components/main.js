@@ -193,10 +193,10 @@ const Main = () => {
         </Row>
          </div>
       </div>
-      <div className='card'>
+      <div className='card '>
       <table style={{width: '100%', textAlign:'center'}} className="leaderboard chart-table" cellpadding="2">
-        <thead>
-        <tr>
+        <thead >
+        <tr className='elegant-color'>
         <th>Mo</th>
         <th>Tue</th>
         <th>Wed</th>
