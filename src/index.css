@@ -5,10 +5,10 @@ body {
   text-align: center;
   font-weight: 400 !important;
   font-family: "Montserrat", sans-serif;
-  -webkit-user-select: none;  
+  /* -webkit-user-select: none;  
   -moz-user-select: none;    
   -ms-user-select: none;      
-  user-select: none;
+  user-select: none; */
   background-color: #e0e0e0 !important; 
 
 }
