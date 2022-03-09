@@ -9,6 +9,16 @@
   -ms-user-select: none;      
   user-select: none; */
 }
+.App1 {
+  text-align: center;
+  font-weight: 400 !important;
+  background-color: #ffffff !important; 
+  font-family: "Montserrat", sans-serif;
+  /* -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none; */
+}
 
  
 
@@ -28,6 +38,14 @@
   border-color: #000 !important;
    font-size: 15px;
    border-radius: 0%;
+}
+.tabs-extra-demo-button {
+  margin-right: 16px;
+}
+
+.ant-row-rtl .tabs-extra-demo-button {
+  margin-right: 0;
+  margin-left: 16px;
 }
 
 .luckySection{
@@ -160,10 +178,7 @@
     pointer-events: none;
   }
 
-  input{
-    width: 80%;
-    min-height: 65px !important; 
-  }
+  
   
   
 .centerLoading{
@@ -172,11 +187,7 @@
   margin-top: 8%;
   margin-left: 45%;
 }
-
-  .inputError{
-    width: 80%;
-    min-height: 65px !important; 
-  }
+ 
   
   .App-header {
     font-size: 18px !important;
@@ -193,24 +204,7 @@
 }
 
 
-input{
-  margin: auto; 
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background: #e0e0e0;
-  box-shadow:  -10px -10px 15px rgba(255,255,255,0.55),
-  10px 10px 15px rgba(70,70,70,0.12),
-  inset -10px -10px 15px rgba(255,255,255,0.55),
-  inset 10px 10px 15px rgba(70,70,70,0.12);
-  border: 4px solid #e0e0e0 !important; 
-  padding: 0 1.5rem;
-  font-size: 16px !important;
-  padding: 1%;
-  /* color: black; */
-  outline: none;
-}
-
+ 
 .inputError{
   color: rgb(224, 57, 57);
   outline: none;

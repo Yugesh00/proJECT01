@@ -1,26 +1,33 @@
 import firebase from "../components/firebase";
 
-const db = firebase.ref("/pslQuiz");
+const db = firebase;
+
+db.settings({
+  timestampsInSnapshots: true
+});
+const userRef = db.collection("live_result");
 
 class DataService {
   getAll() {
-    return db.orderByChild("points").limitToLast(5);
+    return userRef.get();
   }
-
+  userRef1(){
+    return userRef;
+  }
   create(user) {
-    return db.push(user);
+    return userRef.push(user);
   }
 
   update(key, value) {
-    return db.child(key).update(value);
+    return userRef.child(key).update(value);
   }
 
   delete(key) {
-    return db.child(key).remove();
+    return userRef.child(key).remove();
   }
 
   deleteAll() {
-    return db.remove();
+    return userRef.remove();
   }
 }
 

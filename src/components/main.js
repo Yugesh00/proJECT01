@@ -195,7 +195,14 @@ const Main = () => {
          </div>
       </div>
      <Chart />
+       <Link to={"/admin"}>
+      <button>
+         <span style={{fontWeight:'14px'}}>
+         Login
+         </span>
          
+        </button>
+        </Link>  
       </header> 
     </div>
   );
