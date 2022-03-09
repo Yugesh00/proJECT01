@@ -2,12 +2,9 @@ import React, {useState, useEffect} from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import {BrowserRouter as Router, Route, Link, Redirect   } from "react-router-dom";
 import audio from '../assests/onclick.mp3';
-import DataService from "../services/database"
-import firebase from "../components/firebase";
 import { Tabs, Button,  Row, Col, Checkbox, Input  } from 'antd';
 import LuckyNumber from "./admin/luckyNumber";
-const db = firebase;
-
+ 
 const { TabPane } = Tabs;
 
 const CheckboxGroup = Checkbox.Group;
@@ -17,55 +14,14 @@ const Admin = () =>{
     const [error, setError] = useState(false)
     const [disabled1, setDisabled1] = useState(true)
     const [disabled2, setDisabled2] = useState(true)
-    const [show1, setShow1] = useState(false)
-    const [show2, setShow2] = useState(false)
-
+     
     const [message, setMessage] = useState("Please Enter Your Name!")
     // const history = useHistory();
     const [load, setLoad] = useState(false)
-    const [list, setList] = useState([])
 
-    const editSection1 = () => {
-      if(disabled1 === true){
-        setDisabled1(false);
-        setShow1(true);
-      }
-      else{
-        setDisabled1(true);
-        setShow1(false);
-      } 
-      }
-
-      const editSection2 = () => {
-        if(disabled2 === true){
-          setDisabled2(false);
-          setShow2(true);
-        }
-        else{
-          setDisabled2(true);
-          setShow2(false);
-        } 
-        }
-      useEffect(() => {
-        // if(userName === ""){
-        //   history.push('/user');
-        // }
-        db.collection("live_result").onSnapshot((snapshot) => {
-            setList(
-                snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    data: doc.data(),
-                  }))
-            );
-          });   
-          setUser()
-      }, [])
+ 
      
-    const setUser = () => {
-        console.log(list ,"Sds");
-
-    }
-
+     
     if (load){
     return <Redirect to='/selection'  />
      }

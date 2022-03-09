@@ -7,6 +7,7 @@ import audio from '../assests/onclick.mp3';
 import { Tabs, Row, Col  } from 'antd'; 
 import './table.css';
 import Chart from './question';
+import LuckyNumber from './admin/luckyNumberMain';
 const { TabPane } = Tabs;
 
 const Main = () => {
@@ -36,14 +37,7 @@ const Main = () => {
           </span>
          </div>
          <div className='topMar1'>
-         <Row >
-            <Col className='subSection1' span={12}>
-            <p> Golden Ank </p>
-            <p>  Golden Ank </p> </Col>
-          <Col className='  subSection2' span={12}>
-          <p>  Golden Ank  </p>
-          <p> Golden Ank </p>  </Col>
-        </Row>
+          <LuckyNumber />
          </div>
       </div>
       <div className='card liveResultSection'>
