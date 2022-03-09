@@ -5,25 +5,47 @@ import audio from '../assests/onclick.mp3';
 import DataService from "../services/database"
 import firebase from "../components/firebase";
 import { Tabs, Button,  Row, Col, Checkbox, Input  } from 'antd';
-
+import LuckyNumber from "./admin/luckyNumber";
 const db = firebase;
 
 const { TabPane } = Tabs;
 
 const CheckboxGroup = Checkbox.Group;
-const operations = <Button>Extra Action</Button>;
+const operations = <Button>Logout</Button>;
 const Admin = () =>{
     const [name, setName] = useState("")
     const [error, setError] = useState(false)
+    const [disabled1, setDisabled1] = useState(true)
+    const [disabled2, setDisabled2] = useState(true)
+    const [show1, setShow1] = useState(false)
+    const [show2, setShow2] = useState(false)
+
     const [message, setMessage] = useState("Please Enter Your Name!")
     // const history = useHistory();
     const [load, setLoad] = useState(false)
     const [list, setList] = useState([])
 
-    const Play = () => {
-        new Audio(audio).play();
+    const editSection1 = () => {
+      if(disabled1 === true){
+        setDisabled1(false);
+        setShow1(true);
+      }
+      else{
+        setDisabled1(true);
+        setShow1(false);
+      } 
       }
 
+      const editSection2 = () => {
+        if(disabled2 === true){
+          setDisabled2(false);
+          setShow2(true);
+        }
+        else{
+          setDisabled2(true);
+          setShow2(false);
+        } 
+        }
       useEffect(() => {
         // if(userName === ""){
         //   history.push('/user');
@@ -48,7 +70,7 @@ const Admin = () =>{
     return <Redirect to='/selection'  />
      }
     return (
-      <div className="App1">  
+      <div className="App1" style={{backgroundColor:'#fff'}}>  
       
       <div className='card  headSection'>
         <span style={{fontWeight:'14px'}}>
@@ -62,10 +84,10 @@ const Admin = () =>{
       </div>
       <div className=" ">
       <Row >
-      <Col className='subSection1' span={24}>
+      <Col className='' span={24}>
       <Tabs className="pl-3 pr-2" style={{backgroundColor:'#fff'}} tabBarExtraContent={operations}>
         <TabPane className="" tab="Lucky Number" key="1">
-        <Input disabled={false} placeholder="Basic usage" />
+        <LuckyNumber />
         </TabPane>
         <TabPane tab="Live Result" key="2">
           Content of tab 2
@@ -83,7 +105,7 @@ const Admin = () =>{
       </Col></Row>
       </div>
       <div className="getUserTop">
-      <table>
+      {/* <table>
       {list?.map(({ id, data }) => (
             <tr key={id}>
               <td>{data.name}</td>
@@ -102,7 +124,7 @@ const Admin = () =>{
               </td>
             </tr>
           ))}
-        </table>
+        </table> */}
       
   
       </div>
