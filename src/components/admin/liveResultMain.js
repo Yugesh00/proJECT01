@@ -3,12 +3,13 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import {BrowserRouter as Router, Route, Link, Redirect   } from "react-router-dom";
  import firebase from "../firebase";
 import { Tabs, Button,  Row, Col  } from 'antd';
+import LiveResult from "./liveResult";
 
 const db = firebase;
  
 const { TabPane } = Tabs;
 
- const LuckyNumberMain = () =>{ 
+ const LiveResultMain = () =>{ 
     const [message, setMessage] = useState("Please Enter Your Name!")
     // const history = useHistory();
     const [load, setLoad] = useState(false)
@@ -18,8 +19,9 @@ const { TabPane } = Tabs;
     const [number1, setNumber1] = useState("")
     const [number2, setNumber2] = useState("")
     const [loading, setLoading] = useState(true);
+    const [number3, setNumber3] = useState("")
+    const [name3, setName3] = useState("")
 
-  
  
         
         useEffect(() => {
@@ -29,7 +31,7 @@ const { TabPane } = Tabs;
        const getUser = () =>{
             const getPostsFromFirebase = [];
             const subscriber = db
-              .collection("lucky_number")
+              .collection("live_result")
               .onSnapshot((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                   getPostsFromFirebase.push({
@@ -41,6 +43,8 @@ const { TabPane } = Tabs;
                 setNumber1(getPostsFromFirebase[0].number);
                 setName2(getPostsFromFirebase[1].name);
                 setNumber2(getPostsFromFirebase[1].number);
+                setName3(getPostsFromFirebase[2].name);
+                setNumber3(getPostsFromFirebase[2].number);
                 setLoading(false);
               });
         
@@ -48,19 +52,38 @@ const { TabPane } = Tabs;
             return () => subscriber();
         }
       
-    return ( 
+    return (  
         <Row >
-        <Col className='subSection1' span={12}>
+        <Col className='liveResultSubSection bottomPad' span={24}>
         <p> {name1} </p>
-        <p>  {number1} </p> 
+        <p>  {number1} </p>  
+        <button type="button"  className='refreshBtn'>
+          <p  style={{fontSize:'12px'}}>
+          Refresh
+          </p> 
+       </button>
         </Col>
-      <Col className='  subSection2' span={12}>
-      <p>  {name2} </p>
-      <p> {number2} </p> 
-       </Col>
+      <Col className='liveResultSubSection bottomPad' span={24}>
+      <p> {name2} </p>
+        <p>  {number2} </p> 
+      <button type="button"  className='refreshBtn'>
+          <p  style={{fontSize:'12px'}}>
+          Refresh
+          </p> 
+       </button>
+      </Col>
+      <Col className='liveResultSubSection bottomPad' span={24}>
+      <p> {name3} </p>
+        <p>  {number3} </p> 
+      <button type="button"  className='refreshBtn'>
+          <p  style={{fontSize:'12px'}}>
+          Refresh
+          </p> 
+       </button>
+      </Col>
     </Row>
     );
 }
 
 
-export default LuckyNumberMain;
+export default LiveResultMain;

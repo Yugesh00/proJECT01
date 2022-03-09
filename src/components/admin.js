@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Link, Redirect   } from "react-router-do
 import audio from '../assests/onclick.mp3';
 import { Tabs, Button,  Row, Col, Checkbox, Input  } from 'antd';
 import LuckyNumber from "./admin/luckyNumber";
- 
+import LiveResult from "./admin/liveResult";
 const { TabPane } = Tabs;
 
 const CheckboxGroup = Checkbox.Group;
@@ -46,7 +46,7 @@ const Admin = () =>{
         <LuckyNumber />
         </TabPane>
         <TabPane tab="Live Result" key="2">
-          Content of tab 2
+          <LiveResult />
         </TabPane>
         <TabPane tab="15 Market" key="3">
           Content of tab 3

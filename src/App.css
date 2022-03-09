@@ -179,6 +179,23 @@
   margin-right: 5%;
   width: 30%;
 }
+
+.inputMar2{
+  margin-right: 1%;
+  margin-left: 2%;
+  width: 30%;
+}
+.inputMar3{
+  margin-right: 1%;
+  margin-left: 1%;
+  width: 30%;
+}
+.inputMar4{
+  margin-right: 2%;
+  margin-left: 1%;
+  width: 30%;
+}
+
  .inputCs{
    margin-top: 10px;
  }
@@ -201,6 +218,21 @@
     width: 100%;
   }
 
+  .inputMar2{
+    margin-right: 0%;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .inputMar3{
+    margin-right: 0%;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .inputMar4{
+    margin-right: 0%;
+    margin-left: 0%;
+    width: 100%;
+  }
   .colLeft{
     margin-left: 0%;
   }

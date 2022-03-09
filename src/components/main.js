@@ -8,6 +8,7 @@ import { Tabs, Row, Col  } from 'antd';
 import './table.css';
 import Chart from './question';
 import LuckyNumber from './admin/luckyNumberMain';
+import LiveResult from './admin/liveResultMain';
 const { TabPane } = Tabs;
 
 const Main = () => {
@@ -47,35 +48,8 @@ const Main = () => {
           </span>
          </div>
          <div className='topMar1'>
-         <Row >
-            <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Golden Ank </p>
-            <p>  312321 </p> 
-            <button type="button"  className='refreshBtn'>
-              <p  style={{fontSize:'12px'}}>
-              Refresh
-              </p> 
-           </button>
-            </Col>
-          <Col className='liveResultSubSection bottomPad' span={24}>
-          <p>  Golden Ank  </p>
-          <p> 1232</p>  
-          <button type="button"  className='refreshBtn'>
-              <p  style={{fontSize:'12px'}}>
-              Refresh
-              </p> 
-           </button>
-          </Col>
-          <Col className='liveResultSubSection bottomPad' span={24}>
-          <p>  Golden Ank  </p>
-          <p> 122 </p>  
-          <button type="button"  className='refreshBtn'>
-              <p  style={{fontSize:'12px'}}>
-              Refresh
-              </p> 
-           </button>
-          </Col>
-        </Row>
+        <LiveResult/>
+        
          </div>
       </div>
       <br/>
