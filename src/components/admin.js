@@ -8,7 +8,7 @@ import LiveResult from "./admin/liveResult";
 const { TabPane } = Tabs;
 
 const CheckboxGroup = Checkbox.Group;
-const operations = <Button>Logout</Button>;
+const operations =  <Link to={"/"}><Button>Logout</Button></Link>;
 const Admin = () =>{
     const [name, setName] = useState("")
     const [error, setError] = useState(false)
