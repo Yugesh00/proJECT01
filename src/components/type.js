@@ -65,13 +65,20 @@ const Main = () => {
     //   history.push('/user');
     // }
     setLoading(true)
-    DataService.getAll().on("value", handleList);
-
+     DataService.userRef1().collection("live_result").onSnapshot((snapshot) => {
+      setList(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      );
+    });
+    console.log(list);
   }, [])
 
   const handleList = (items) => {
     let tutorials = [];
-
+    console.log(items);
     items.forEach((item) => {
       let key = item.key;
       let data = item.val();
