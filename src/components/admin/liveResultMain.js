@@ -22,7 +22,9 @@ const { TabPane } = Tabs;
     const [number3, setNumber3] = useState("")
     const [name3, setName3] = useState("")
 
- 
+    const refresh = () => {
+        window.location.reload(false);
+      }
         
         useEffect(() => {
             getUser()
@@ -57,7 +59,7 @@ const { TabPane } = Tabs;
         <Col className='liveResultSubSection bottomPad' span={24}>
         <p> {name1} </p>
         <p>  {number1} </p>  
-        <button type="button"  className='refreshBtn'>
+        <button onClick={refresh} type="button"  className='refreshBtn'>
           <p  style={{fontSize:'12px'}}>
           Refresh
           </p> 
@@ -66,7 +68,7 @@ const { TabPane } = Tabs;
       <Col className='liveResultSubSection bottomPad' span={24}>
       <p> {name2} </p>
         <p>  {number2} </p> 
-      <button type="button"  className='refreshBtn'>
+      <button onClick={refresh} type="button"  className='refreshBtn'>
           <p  style={{fontSize:'12px'}}>
           Refresh
           </p> 
@@ -75,7 +77,7 @@ const { TabPane } = Tabs;
       <Col className='liveResultSubSection bottomPad' span={24}>
       <p> {name3} </p>
         <p>  {number3} </p> 
-      <button type="button"  className='refreshBtn'>
+      <button onClick={refresh} type="button"  className='refreshBtn'>
           <p  style={{fontSize:'12px'}}>
           Refresh
           </p> 
