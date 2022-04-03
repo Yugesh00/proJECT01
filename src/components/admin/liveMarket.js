@@ -207,7 +207,7 @@ const LiveResult = () =>{
        const getUser = () =>{
             const getPostsFromFirebase = [];
             const subscriber = db
-              .collection("market_charts").doc('kalyan').collection('jodi') 
+              .collection("market_charts")
               .onSnapshot((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                   getPostsFromFirebase.push({

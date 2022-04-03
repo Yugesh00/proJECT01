@@ -52,12 +52,12 @@ const Admin = () =>{
         <TabPane tab="Live Market" key="3">
         <LiveMarket />
         </TabPane>
-        <TabPane tab="15 Jodi Chart" key="4">
+        {/* <TabPane tab="15 Jodi Chart" key="4">
           Content of tab 1
         </TabPane>
         <TabPane tab="10 Market Pending" key="5">
           Content of tab 2
-        </TabPane> 
+        </TabPane>  */}
       </Tabs>
       </Col></Row>
       </div>
