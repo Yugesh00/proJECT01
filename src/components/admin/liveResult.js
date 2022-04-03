@@ -134,9 +134,9 @@ const LiveResult = () =>{
         <Row>
     
          <div className="inputMar2">
-         <label className="float-left inputCs">Lucky Number Name 1</label>
+         <label className="float-left inputCs">Market</label>
          <Input onChange={(e) => setName1(e.target.value)} className="" disabled={disabled1} placeholder="Name" value={name1}/>
-         <label className="float-left inputCs">Lucky Number 1</label>
+         <label className="float-left inputCs">Lucky Number </label>
          <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={disabled1} placeholder="Number" value={number1}/>
          <button type="button" onClick={editSection1} className='editBtn'>
               <p  style={{fontSize:'12px'}}>
@@ -151,9 +151,9 @@ const LiveResult = () =>{
               </button>}
          </div>
          <div className="inputMar2">
-         <label className="float-left inputCs">Lucky Number Name 2</label>
+         <label className="float-left inputCs">Market</label>
          <Input onChange={(e) => setName2(e.target.value)} className="" disabled={disabled2} placeholder={"Name"} value={name2}/>
-         <label className="float-left inputCs">Lucky Number 2</label>
+         <label className="float-left inputCs">Lucky Number </label>
          <Input onChange={(e) => setNumber2(e.target.value)} className="" disabled={disabled2} placeholder="Number"  value={number2} />
          <button onClick={editSection2} type="button"  className='editBtn'>
               <p  style={{fontSize:'12px'}}>
@@ -168,9 +168,9 @@ const LiveResult = () =>{
            </button>}
          </div>
          <div className="inputMar3">
-         <label className="float-left inputCs">Lucky Number Name 2</label>
+         <label className="float-left inputCs">Market</label>
          <Input onChange={(e) => setName3(e.target.value)} className="" disabled={disabled3} placeholder={"Name"} value={name3}/>
-         <label className="float-left inputCs">Lucky Number 2</label>
+         <label className="float-left inputCs">Lucky Number  </label>
          <Input onChange={(e) => setNumber3(e.target.value)} className="" disabled={disabled3} placeholder="Number"  value={number3} />
          <button onClick={editSection3} type="button"  className='editBtn'>
               <p  style={{fontSize:'12px'}}>

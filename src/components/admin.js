@@ -5,6 +5,7 @@ import audio from '../assests/onclick.mp3';
 import { Tabs, Button,  Row, Col, Checkbox, Input  } from 'antd';
 import LuckyNumber from "./admin/luckyNumber";
 import LiveResult from "./admin/liveResult";
+import LiveMarket from "./admin/liveMarket";
 const { TabPane } = Tabs;
 
 const CheckboxGroup = Checkbox.Group;
@@ -48,8 +49,8 @@ const Admin = () =>{
         <TabPane tab="Live Result" key="2">
           <LiveResult />
         </TabPane>
-        <TabPane tab="15 Market" key="3">
-          Content of tab 3
+        <TabPane tab="Live Market" key="3">
+        <LiveMarket />
         </TabPane>
         <TabPane tab="15 Jodi Chart" key="4">
           Content of tab 1

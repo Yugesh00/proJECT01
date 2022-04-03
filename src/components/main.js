@@ -64,7 +64,7 @@ const Main = () => {
          <div className='topMar1 '>
          <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
             <Col className='' span={8}> 
-            <button type="button"  className='refreshBtn'>
+            <button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Jodi
               </p> 
@@ -76,7 +76,7 @@ const Main = () => {
               <p>11:45 AM    12:45 PM</p>
           </Col>
           <Col className='' span={8}>  
-          <button type="button"  className='refreshBtn'>
+          <button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Panel
               </p> 
@@ -85,7 +85,7 @@ const Main = () => {
         </Row>
         <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
             <Col className='' span={8}> 
-            <button type="button"  className='refreshBtn'>
+            <button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Jodi
               </p> 
@@ -97,7 +97,7 @@ const Main = () => {
               <p>11:45 AM    12:45 PM</p>
           </Col>
           <Col className='' span={8}>  
-          <button type="button"  className='refreshBtn'>
+          <button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Panel
               </p> 

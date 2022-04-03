@@ -37,10 +37,12 @@ const { TabPane } = Tabs;
                     key: doc.id, 
                   });
                 });
-                setName1(getPostsFromFirebase[0].name);
-                setNumber1(getPostsFromFirebase[0].number);
-                setName2(getPostsFromFirebase[1].name);
-                setNumber2(getPostsFromFirebase[1].number);
+                if(getPostsFromFirebase.length !==0){
+                    setName1(getPostsFromFirebase[0].name);
+                    setNumber1(getPostsFromFirebase[0].number);
+                    setName2(getPostsFromFirebase[1].name);
+                    setNumber2(getPostsFromFirebase[1].number);
+                } 
                 setLoading(false);
               });
         

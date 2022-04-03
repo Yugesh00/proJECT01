@@ -1,0 +1,9 @@
+Time Bazar  -  01:00 PM   02:00 PM
+Milan Day - 03:05 PM   05:05 PM
+Kalyan - 04:10 PM   06:10 PM
+Milan night - 09:00 PM   11:00 PM
+Rajdhani Night - 09:30 PM   11:45 PM
+Rajdhani Day - 03:05 PM   05:05 PM
+Kamal Day - 01:45 PM   02:45 PM
+Kamal Night - 09:30 PM   11:00 PM
+Main Bazar - 09:40 PM   12:05 AM

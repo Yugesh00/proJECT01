@@ -41,12 +41,14 @@ const { TabPane } = Tabs;
                     key: doc.id, 
                   });
                 });
+                if(getPostsFromFirebase.length !==0){
                 setName1(getPostsFromFirebase[0].name);
                 setNumber1(getPostsFromFirebase[0].number);
                 setName2(getPostsFromFirebase[1].name);
                 setNumber2(getPostsFromFirebase[1].number);
                 setName3(getPostsFromFirebase[2].name);
                 setNumber3(getPostsFromFirebase[2].number);
+                }
                 setLoading(false);
               });
         
