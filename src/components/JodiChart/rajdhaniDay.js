@@ -6,7 +6,7 @@ import './../table.css'
 
  
 
-const Chart1 = () => { 
+const rajdhaniDayj = () => { 
 
   return (
 	<div>  
@@ -4422,4 +4422,4 @@ const Chart1 = () => {
   );
 }
 
-export default Chart1;
+export default rajdhaniDayj;

@@ -1,24 +1,23 @@
 import React, {useState, useEffect} from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBListGroupItem } from "mdbreact";  
 import { Link } from "react-router-dom";
-import firebase from "../firebase";
+import DataService from "../../services/database" 
 import './../table.css'
 import { Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
 
 const db = firebase;
 
-const Question = () => { 
+const timeBazarp = () => { 
    const [loading, setLoading] = useState(true);
 
    
    useEffect(() => {
       getUser()
     }, [loading]);  
-
+   
     const getUser = () =>{
       const getPostsFromFirebase = [];
-      const subscriber = db
-        .collection("market_charts").doc("kalyan").collection("jodi")
+      const subscriber = db.collection("market_charts").doc("kalyan").collection("jodi")
         .onSnapshot((querySnapshot) => {
           querySnapshot.forEach((doc) => {
             getPostsFromFirebase.push({
@@ -33,13 +32,13 @@ const Question = () => {
           
            setLoading(false);
         });
-  
+   
       // console.log(list)
       return () => subscriber();
-  }
- 
-  const Arr = (arr) => {
- 
+   }
+   
+   const Arr = (arr) => {
+   
    let res = arr.reduce((acc, {week, number}) =>
    {
        acc[week] = acc[week] || new Set();
@@ -52,17 +51,17 @@ const Question = () => {
    );
    
    console.log(res);
-}
-
-  if (loading){
+   }
+   
+   if (loading){
    return <Spin className="mt-5" size="large" />
     }
-
+   
     return (
         <div className='card setCenter'>
-<table style={{textAlign:'center'}} className="leaderboard1   chart-table" cellpadding="2">
-<thead>
-<tr>
+            <table style={{textAlign:'center'}} className="leaderboard1   chart-table" cellpadding="2">
+            <thead>
+   <tr>
       <th>Date</th>
       <th colspan="3">Mon</th>
       <th colspan="3">Tue</th>
@@ -5695,7 +5694,7 @@ const Question = () => {
 );
 }
 
-export default Question;
+export default timeBazarp;
 
 
 

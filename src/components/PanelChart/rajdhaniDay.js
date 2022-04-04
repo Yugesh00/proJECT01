@@ -5,7 +5,7 @@ import DataService from "../../services/database"
 import './../table.css'
 
 
-const Question = () => { 
+const rajdhaniDayp = () => { 
 
     return (
         <div className='card setCenter'>
@@ -18,7 +18,7 @@ const Question = () => {
 );
 }
 
-export default Question;
+export default rajdhaniDayp;
 
 
 
