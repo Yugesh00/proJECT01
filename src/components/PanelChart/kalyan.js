@@ -6,7 +6,7 @@ import './../table.css'
 
  
 
-const Question = () => { 
+const kalyanp = () => { 
 
   return (
 		 <div className='card setCenter'>
@@ -5575,6 +5575,6 @@ const Question = () => {
   );
 }
 
-export default Question;
+export default kalyanp;
 
 

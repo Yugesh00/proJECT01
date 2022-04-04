@@ -5,9 +5,10 @@ import DataService from "../../services/database"
 import './../table.css'
 
 
-const Question = () => { 
+const milanNightp = () => { 
 
     return (
+       <div>
         <div className='card setCenter'>
             <table style={{textAlign:'center'}} className="leaderboard1   chart-table" cellpadding="2">
             <thead>
@@ -659,7 +660,7 @@ const Question = () => {
       <td> 5<br/> 7<br/> 7<br/></td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td> 4 <br/> 5 <br/> 9 <br/></td>
       <td>86</td>
       <td> 4<br/> 5<br/> 7<br/></td>
@@ -728,7 +729,7 @@ const Question = () => {
       <td> 1<br/> 2<br/> 0<br/></td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td> 3 <br/> 8 <br/> 8 <br/></td>
       <td>98</td>
       <td> 1<br/> 3<br/> 4<br/></td>
@@ -785,7 +786,7 @@ const Question = () => {
       <td className="r"> 2<br/> 3<br/> 0<br/></td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td> 5 <br/> 8 <br/> 9 <br/></td>
       <td>25</td>
       <td> 4<br/> 5<br/> 6<br/></td>
@@ -941,31 +942,31 @@ const Question = () => {
       <td> 1<br/> 6<br/> 0<br/></td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
    </tr>
    <tr>
       <td>28-10-2019<br/> To <br/> 02-11-2019</td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
       <td className="r">*<br/>*<br/>*</td>
       <td className="r">**</td>
-      <td><*<br/>*<br/>*</*></td>
+      <td>*<br/>*<br/>*</td>
    </tr>
    <tr>
       <td>04-11-2019<br/> To <br/> 09-11-2019</td>
@@ -3470,11 +3471,11 @@ const Question = () => {
             </table>
 
         </div>
-
+        </div>
 );
 }
 
-export default Question;
+export default milanNightp;
 
 
 

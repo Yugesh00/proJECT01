@@ -6,7 +6,7 @@ import './../table.css'
 
  
 
-const Chart1 = () => { 
+const kamalDayj = () => { 
 
   return (
 	<div>  
@@ -2117,4 +2117,4 @@ const Chart1 = () => {
   );
 }
 
-export default Chart1;
+export default kamalDayj;

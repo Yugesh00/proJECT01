@@ -5,7 +5,7 @@ import DataService from "../../services/database"
 import './../table.css'
 
 
-const Chart1 = () => { 
+const timeBazarj = () => { 
 
   return (
 	<div>  
@@ -2136,4 +2136,4 @@ const Chart1 = () => {
   );
 }
 
-export default Chart1;
+export default timeBazarj;

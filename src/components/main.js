@@ -1,6 +1,6 @@
 import logo from '../pslLogo1.png';
 import 'mdbreact/dist/css/mdb.css';
-import Question from './question'
+import Question from './PanelChart/timeBazar';
 import { MDBBtn } from "mdbreact";
 import {BrowserRouter as Router, Route, Link } from "react-router-dom";
 import audio from '../assests/onclick.mp3';
@@ -9,6 +9,7 @@ import './table.css';
 import Chart from './question';
 import LuckyNumber from './admin/luckyNumberMain';
 import LiveResult from './admin/liveResultMain';
+
 const { TabPane } = Tabs;
 
 const Main = () => {
@@ -116,20 +117,32 @@ const Main = () => {
          </div>
          <div className='topMar1 '> 
         <Row> 
-           <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> <Link to="./JodiChart/timeBazar">Time Bazar</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./JodiChart/malanDay"> Malan Day</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./JodiChart/kalyan"> Kalyan </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./JodiChart/malanNight"> Malan Night </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./JodiChart/rajdhaniDay"> Rajdhani Day </Link></p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./JodiChart/rajdhaniNight"> Rajdhani Night</Link> </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./JodiChart/kamalDay"> Kamal Day </Link></p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./JodiChart/kamalNight"> Kamal Night</Link> </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./JodiChart/mainBazar"> Main Bazar</Link> </p> 
             </Col>
         </Row>
          </div>
@@ -144,25 +157,36 @@ const Main = () => {
          </div>
          <div className='topMar1 '> 
         <Row> 
-           <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+        <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> <Link to="./PanelChart/timeBazar">Time Bazar</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./PanelChart/malanDay"> Malan Day</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./PanelChart/kalyan"> Kalyan </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./PanelChart/malanNight"> Malan Night </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p><Link to="./PanelChart/rajdhaniDay"> Rajdhani Day </Link></p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./PanelChart/rajdhaniNight"> Rajdhani Night</Link> </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./PanelChart/kamalDay"> Kamal Day </Link></p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./PanelChart/kamalNight"> Kamal Night</Link> </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./PanelChart/mainBazar"> Main Bazar</Link> </p> 
             </Col>
         </Row>
          </div>
       </div>
-     <Chart />
        <Link to={"/admin"}>
       <button>
          <span style={{fontWeight:'14px'}}>

@@ -5,7 +5,7 @@ import DataService from "../../services/database"
 import './../table.css'
 
 
-const Question = () => { 
+const timeBazarp = () => { 
 
     return (
         <div className='card setCenter'>
@@ -5635,6 +5635,7 @@ const Question = () => {
       <td className="">1<br/>6<br/>7</td>
       <td className="">46</td>
       <td className="">2<br/>4<br/>0</td>
+      </tr>
 </tbody>
             </table>
 
@@ -5643,7 +5644,7 @@ const Question = () => {
 );
 }
 
-export default Question;
+export default timeBazarp;
 
 
 
