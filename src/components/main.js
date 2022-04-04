@@ -1,6 +1,6 @@
 import logo from '../pslLogo1.png';
 import 'mdbreact/dist/css/mdb.css';
-import Question from './question'
+import Question from './PanelChart/timeBazar';
 import { MDBBtn } from "mdbreact";
 import {BrowserRouter as Router, Route, Link } from "react-router-dom";
 import audio from '../assests/onclick.mp3';
@@ -9,6 +9,7 @@ import './table.css';
 import Chart from './question';
 import LuckyNumber from './admin/luckyNumberMain';
 import LiveResult from './admin/liveResultMain';
+
 const { TabPane } = Tabs;
 
 const Main = () => {
@@ -116,20 +117,32 @@ const Main = () => {
          </div>
          <div className='topMar1 '> 
         <Row> 
-           <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+        <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Time Bazar </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Malan Day </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Kalyan </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Malan Night </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Rajdhani Day </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Rajdhani Night </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Kamal Day </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Kamal Night </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Main Bazar </p> 
             </Col>
         </Row>
          </div>
@@ -144,25 +157,37 @@ const Main = () => {
          </div>
          <div className='topMar1 '> 
         <Row> 
-           <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+        <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Time Bazar </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Malan Day </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Kalyan </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Malan Night </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p> Time Chart </p> 
+            <p> Rajdhani Day </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Rajdhani Night </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Kamal Day </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Kamal Night </p> 
+            </Col>
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p> Main Bazar </p> 
             </Col>
         </Row>
          </div>
       </div>
-     <Chart />
+     <Question />
        <Link to={"/admin"}>
       <button>
          <span style={{fontWeight:'14px'}}>

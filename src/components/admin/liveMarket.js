@@ -27,6 +27,7 @@ const LiveResult = () =>{
     const [name2, setName2] = useState("")
     const [name3, setName3] = useState("")
     const [today1, setToday1] = useState("")
+    const [currentWeek, setCurrentWeek] = useState("")
 
 
     const [number1, setNumber1] = useState("")
@@ -77,6 +78,13 @@ const LiveResult = () =>{
             return yyyy + '-' + mm + '-' + dd; 
         }
 
+        const dayToday = () =>{
+          var today = new Date();
+          var days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+          var vari = days[today.getDay()];
+          return vari;
+        }
+
         const setWeek = () => {
           const today = new Date();
           var nextDate = new Date(new Date().setDate(new Date().getDate() + 6))
@@ -102,18 +110,20 @@ const LiveResult = () =>{
             if(today !== today1){
               if(setMonday.getDay() === 0){  
                 db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
-                  number: number1, 
+                  [dayToday()]: number1, 
                   currentTime:  ' ' + new Date(),
                   isMonday: true, 
                   week: setWeek()
                 }).then((ref) => { console.log('ref')});
                 db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
-                  number: panelNumber[1],
-                  currentTime:  ' ' + new Date() 
+                  [dayToday()]: panelNumber[1],
+                  currentTime:  ' ' + new Date(),
+                  week: setWeek() 
                 }).then((ref) => { console.log('ref')});
                 const subscriber = db.collection("market_charts").doc("kalyan").update({
                   number: number1,
-                  today: setToday()
+                  today: setToday(),
+                  week: setWeek()
                })
                getUser();
                editSection1();
@@ -121,16 +131,19 @@ const LiveResult = () =>{
               }
               else{
                 db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
-                  number: number1, 
-                  currentTime: ' ' + new Date()
+                  [dayToday()]: number1, 
+                  currentTime: ' ' + new Date(),
+                  week:currentWeek
                 }).then((ref) => { console.log('ref')});
                 db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
-                  number: panelNumber[1], 
-                  currentTime:  ' ' + new Date()
+                  [dayToday()]: panelNumber[1], 
+                  currentTime:  ' ' + new Date(),
+                  week:currentWeek
                 }).then((ref) => { console.log('ref')});
                 const subscriber = db.collection("market_charts").doc("kalyan").update({
                   number: number1,
-                  today: setToday()
+                  today: setToday(),
+                  week:currentWeek
                })
                getUser();
                editSection1();
@@ -141,17 +154,17 @@ const LiveResult = () =>{
             else{
                  if(setMonday.getDay() === 0){  
                   db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
-                    number: number1, 
+                    [dayToday()]: number1, 
                     currentTime: ' ' + new Date(),
                     isMonday: true, 
                     week: setWeek()
                   }).then((ref) => { console.log('ref')});
                   db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
-                    number: panelNumber[1], 
+                    [dayToday()]: panelNumber[1], 
                     currentTime:  ' ' + new Date()
                   }).then((ref) => { console.log('ref')});
                   const subscriber = db.collection("market_charts").doc("kalyan").update({
-                      number: number1,
+                    number: number1,
                       today: setToday()
                    })
                    getUser();
@@ -160,14 +173,17 @@ const LiveResult = () =>{
                 }
                 else{
                    db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
-                    number: number1, 
+                    [dayToday()]: number1,
+                     week:currentWeek
                   }).then((ref) => { console.log('ref')});
                   db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
-                    number: panelNumber[1], 
+                    [dayToday()]: panelNumber[1],
+                    week:currentWeek
                   }).then((ref) => { console.log('ref')});
                   const subscriber = db.collection("market_charts").doc("kalyan").update({
                       number: number1,
-                      today: setToday()
+                      today: setToday(),
+                      week:currentWeek
                    })
                    getUser();
                    editSection1();
@@ -221,6 +237,7 @@ const LiveResult = () =>{
                 
                 setName1(getPostsFromFirebase[0].name);
                 setNumber1(getPostsFromFirebase[0].number);
+                setCurrentWeek(getPostsFromFirebase[0].week)
                 setToday1(getPostsFromFirebase[0].today);
                 setName2(getPostsFromFirebase[1].name);
                 setNumber2(getPostsFromFirebase[1].number);

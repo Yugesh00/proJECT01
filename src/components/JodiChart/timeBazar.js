@@ -8,9 +8,8 @@ import './../table.css'
 const Chart1 = () => { 
 
   return (
-	<div>  
 	    <div className='card setCenter'>
-            <table style={{  textAlign:'center'}} className="leaderboard chart-table" cellpadding="2">
+  <table style={{  textAlign:'center'}} className="leaderboard chart-table" cellpadding="2">
    <thead>
       <tr>
          <th>Mon</th>
@@ -2132,7 +2131,6 @@ const Chart1 = () => {
    </tbody>
 </table>
             </div>
-    </div>
   );
 }
 

@@ -1,17 +1,68 @@
 import React, {useState, useEffect} from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBListGroupItem } from "mdbreact";  
 import { Link } from "react-router-dom";
-import DataService from "../../services/database" 
+import firebase from "../firebase";
 import './../table.css'
+import { Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
 
+const db = firebase;
 
 const Question = () => { 
+   const [loading, setLoading] = useState(true);
+
+   
+   useEffect(() => {
+      getUser()
+    }, [loading]);  
+
+    const getUser = () =>{
+      const getPostsFromFirebase = [];
+      const subscriber = db
+        .collection("market_charts").doc("kalyan").collection("jodi")
+        .onSnapshot((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            getPostsFromFirebase.push({
+              ...doc.data(),  
+              key: doc.id, 
+            });
+          });
+          console.log(getPostsFromFirebase)
+          var data = Arr(getPostsFromFirebase);
+          
+          console.log(data)
+          
+           setLoading(false);
+        });
+  
+      // console.log(list)
+      return () => subscriber();
+  }
+ 
+  const Arr = (arr) => {
+ 
+   let res = arr.reduce((acc, {week, number}) =>
+   {
+       acc[week] = acc[week] || new Set();
+       acc[week].add(number);
+       return acc;
+   }, {})
+   
+   res = Object.entries(res).map(
+       ([week, numbers]) => ({week, number: [...numbers]})
+   );
+   
+   console.log(res);
+}
+
+  if (loading){
+   return <Spin className="mt-5" size="large" />
+    }
 
     return (
         <div className='card setCenter'>
-            <table style={{textAlign:'center'}} className="leaderboard1   chart-table" cellpadding="2">
-            <thead>
-   <tr>
+<table style={{textAlign:'center'}} className="leaderboard1   chart-table" cellpadding="2">
+<thead>
+<tr>
       <th>Date</th>
       <th colspan="3">Mon</th>
       <th colspan="3">Tue</th>
@@ -5635,6 +5686,7 @@ const Question = () => {
       <td className="">1<br/>6<br/>7</td>
       <td className="">46</td>
       <td className="">2<br/>4<br/>0</td>
+      </tr>
 </tbody>
             </table>
 
