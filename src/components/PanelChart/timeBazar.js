@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import DataService from "../../services/database" 
 import './../table.css'
 import { Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
+import firebase from "./../firebase";
 
 const db = firebase;
 
-const timeBazarp = () => { 
+const TimeBazarp = () => { 
    const [loading, setLoading] = useState(true);
 
    
@@ -5694,7 +5695,7 @@ const timeBazarp = () => {
 );
 }
 
-export default timeBazarp;
+export default TimeBazarp;
 
 
 

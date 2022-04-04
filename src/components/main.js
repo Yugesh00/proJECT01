@@ -116,7 +116,7 @@ const Main = () => {
           </span>
          </div>
          <div className='topMar1 '> 
-        <Row> 
+        <Row>  
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p> <Link to="./JodiChart/timeBazar">Time Bazar</Link> </p> 
             </Col>
@@ -142,7 +142,7 @@ const Main = () => {
             <p><Link to="./JodiChart/kamalNight"> Kamal Night</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./JodiChart/mainBazar"> Main Bazar</Link> </p> 
+            <p><Link to="./JodiChart/mainBazar"> Main Bazar</Link> </p>  
             </Col>
         </Row>
          </div>
@@ -157,7 +157,7 @@ const Main = () => {
          </div>
          <div className='topMar1 '> 
         <Row> 
-        <Col className='liveResultSubSection bottomPad' span={24}>
+        <Col className='liveResultSubSection bottomPad' span={24}>  
             <p> <Link to="./PanelChart/timeBazar">Time Bazar</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
@@ -182,11 +182,12 @@ const Main = () => {
             <p><Link to="./PanelChart/kamalNight"> Kamal Night</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./PanelChart/mainBazar"> Main Bazar</Link> </p> 
+            <p><Link to="./PanelChart/mainBazar"> Main Bazar</Link> </p>  
             </Col>
         </Row>
          </div>
       </div>
+      <Question /> 
        <Link to={"/admin"}>
       <button>
          <span style={{fontWeight:'14px'}}>
