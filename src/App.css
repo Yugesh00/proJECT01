@@ -25,7 +25,7 @@
 .headSection{
   border-style: outset;
   padding: 1%;
-  border-color: #000 !important;
+  border-color: #61892f !important;
   border-radius: 2%;
   font-size: 50px;
 }
@@ -35,7 +35,7 @@
   border-style: outset;
   margin-top: 5px;
   padding: 5px;
-  border-color: #000 !important;
+  border-color: #61892f !important;
    font-size: 15px;
    border-radius: 0%;
 }
@@ -49,42 +49,42 @@
 }
 
 .luckySection{
-  border: 3px solid !important;
+  border: 2px solid !important;
    margin-top: 5px;
   padding: 5px;
-  border-color: #000 !important;
+  border-color: #61892f !important;
    font-size: 30px;
   
 }
 
 .subSection1{
-  border-right: 2px solid #000; 
+  border-right: 2px solid #61892f; 
   border-radius: 0%;
   font-size: 20px;
 }
 
 .subSection2{ 
-  border-left: 2px solid #000;
+  border-left: 2px solid #61892f;
   border-radius: 0%;
   font-size: 20px;
 }
 
 .liveResultSubSection{ 
-  border-bottom: 3px solid #000;
+  border-bottom: 2px solid #61892f;
   border-radius: 0%;
   font-size: 20px;
 }
 
 .liveResultSection{
-  border: 3px solid !important;
+  border: 2px solid !important;
     margin-top: 5px;
   padding: 5px;
-  border-color: #000 !important;
+  border-color: #61892f !important;
    font-size: 30px;
 }
 
 .refreshBtn{
-  background-color: #444444;
+  background-color: #86c232;
   font-weight:500;
   border: none;
   color: white;
@@ -95,7 +95,11 @@
   font-size: 12px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 2% !important;
+  border-radius: 10% !important;
+}
+.refreshBtn:hover{
+  background-color: #6b6e70;
+
 }
 
 
@@ -143,6 +147,12 @@
   margin-top:1% !important;
 }
  
+a{
+  color: #EDF5E1 !important;
+}
+a:hover{
+  color: #86c232 !important;
+}
 
 /* button{
   padding: 20px !important;
