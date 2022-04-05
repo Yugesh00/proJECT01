@@ -6,7 +6,6 @@ import {BrowserRouter as Router, Route, Link } from "react-router-dom";
 import audio from '../assests/onclick.mp3';
 import { Tabs, Row, Col  } from 'antd'; 
 import './table.css';
-import Chart from './question';
 import LuckyNumber from './admin/luckyNumberMain';
 import LiveResult from './admin/liveResultMain';
 
@@ -26,38 +25,42 @@ const Main = () => {
           DPBoss.net
          </span>
       </div>
-       <div className='card elegant-color white-text  welcomeSection'>
+
+
+       <div className='card  white-text  welcomeSection'>
         <marquee  direction="left" style={{fontWeight:'10px'}}>
         !! Welcome Friends in the world of DPBoss.net in INDIA. May you always Win. !!
          </marquee> 
       </div>
       
-      <div className='card luckySection'>
-        <div className='elegant-color white-text card'>
-          <span style={{fontWeight:'14px'}}>
-          Today's Lucky Number
+
+      <div className='card liveResultSection'>
+        <div className='welcomeSection white-text card'>
+          <span style={{fontSize:'25px'}}>
+          TODAY'S LUCKY NUMBER
           </span>
          </div>
          <div className='topMar1'>
           <LuckyNumber />
          </div>
       </div>
+
+
       <div className='card liveResultSection'>
-         <div className='card elegant-color white-text'>
-          <span style={{fontWeight:'14px'}}>
-          Live Result
+         <div className='card welcomeSection white-text'>
+          <span style={{fontSize:'25px'}}>
+          LIVE RESULT
           </span>
          </div>
          <div className='topMar1'>
         <LiveResult/>
-        
          </div>
       </div>
       <br/>
 
       {/* WORLD ME SABSE FAST SATTA MATKA RESULT */}
       <div className='card liveResultSection'>
-         <div className='card elegant-color white-text'>
+         <div className='card welcomeSection white-text'>
           <span style={{fontSize:'25px'}}>
           WORLD ME SABSE FAST SATTA MATKA RESULT
           </span>
@@ -110,7 +113,7 @@ const Main = () => {
 
         {/* SATTA MATKA JODI CHART */}
         <div className='card liveResultSection'>
-         <div className='card elegant-color white-text'>
+         <div className='card welcomeSection white-text'>
           <span style={{fontSize:'25px'}}>
           SATTA MATKA JODI CHART
           </span>
@@ -150,7 +153,7 @@ const Main = () => {
 
        {/* MATKA PANEL CHART */}
        <div className='card liveResultSection'>
-         <div className='card elegant-color white-text'>
+         <div className='card welcomeSection white-text'>
           <span style={{fontSize:'25px'}}>
           MATKA PANEL CHART
           </span>
@@ -187,7 +190,6 @@ const Main = () => {
         </Row>
          </div>
       </div>
-      <Question /> 
        <Link to={"/admin"}>
       <button>
          <span style={{fontWeight:'14px'}}>

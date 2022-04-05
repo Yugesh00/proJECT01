@@ -1,5 +1,24 @@
- 
-  
+.App-header{
+  background: #8ee4af;
+  color: #edf5e1;
+  font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
+.card{
+  background: #5cdb95;
+}
+.welcomeSection{
+  background: #05386b;
+}
+.headSection{
+  color: #edf5e1;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.liveResultSection{
+  margin-top: 40px;
+}
   .leaderboard { 
     text-align: center !important;
     border-collapse: collapse;
