@@ -31,7 +31,21 @@ import {BrowserRouter as Router, Route } from "react-router-dom";
 class App extends Component {
   render() {
   return (
-    <div className="">
+    <div className="App">
+       <header className="App-header ">
+      <div className='card  headSection'>
+        <span style={{fontWeight:'14px'}}>
+          DPBoss.net
+         </span>
+      </div>
+
+
+       <div className='card  white-text  welcomeSection'>
+        <marquee  direction="left" style={{fontWeight:'10px'}}>
+        !! Welcome Friends in the world of DPBoss.net in INDIA. May you always Win. !!
+         </marquee> 
+      </div>
+      
       <Router basename={process.env.REACT_APP_BASENAME || ""}>
     <div>
     <Route exact path={["/","/main"]} component={Main}/>
@@ -58,6 +72,7 @@ class App extends Component {
     <Route exact path={"/JodiChart/milanNight"} component={milanNightj}/>    
     </div>
     </Router> 
+     </header> 
     </div>
   );
   }

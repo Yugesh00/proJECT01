@@ -19,20 +19,7 @@ const Main = () => {
 
   return (
     <div className="App">  
-      <header className="App-header ">
-      <div className='card  headSection'>
-        <span style={{fontWeight:'14px'}}>
-          DPBoss.net
-         </span>
-      </div>
-
-
-       <div className='card  white-text  welcomeSection'>
-        <marquee  direction="left" style={{fontWeight:'10px'}}>
-        !! Welcome Friends in the world of DPBoss.net in INDIA. May you always Win. !!
-         </marquee> 
-      </div>
-      
+     
 
       <div className='card liveResultSection'>
         <div className='welcomeSection white-text card'>
@@ -68,44 +55,193 @@ const Main = () => {
          <div className='topMar1 '>
          <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
             <Col className='' span={8}> 
-            <button type="button"  className='mt-4 refreshBtn'>
-              <p  style={{fontSize:'12px'}}>
-              Jodi
-              </p> 
-           </button>
+              <Link to="./JodiChart/timeBazar">
+                <button type="button"  className='mt-4 refreshBtn'>
+                  <p  style={{fontSize:'12px'}}>
+                    Jodi
+                  </p> 
+                </button>
+              </Link>
             </Col>
           <Col className='' span={8}>
-              <p>  MADHURI  </p>
+              <p>  TIME BAZAR  </p>
               <p> 129-29-360</p>  
               <p>11:45 AM    12:45 PM</p>
           </Col>
           <Col className='' span={8}>  
-          <button type="button"  className='mt-4 refreshBtn'>
+          <Link to="./PanelChart/timeBazar"><button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Panel
               </p> 
-           </button>
+           </button></Link>
           </Col>
         </Row>
         <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
             <Col className='' span={8}> 
-            <button type="button"  className='mt-4 refreshBtn'>
+            <Link to="./JodiChart/malanDay"><button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Jodi
               </p> 
-           </button>
+           </button></Link>
             </Col>
           <Col className='' span={8}>
-              <p>  MADHURI  </p>
+              <p>  MALAN DAY  </p>
               <p> 129-29-360</p>  
               <p>11:45 AM    12:45 PM</p>
           </Col>
           <Col className='' span={8}>  
-          <button type="button"  className='mt-4 refreshBtn'>
+          <Link to="./PanelChart/malanDay"><button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Panel
               </p> 
-           </button>
+           </button></Link>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+            <Link to="./JodiChart/kalyan"><button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Jodi
+              </p> 
+           </button></Link>
+            </Col>
+          <Col className='' span={8}>
+              <p>  KALYAN  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+          <Link to="./PanelChart/kalyan"><button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Panel
+              </p> 
+           </button></Link>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+            <Link to="./JodiChart/malanNight"><button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Jodi
+              </p> 
+           </button></Link>
+            </Col>
+          <Col className='' span={8}>
+              <p>  MALAN NIGHT  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+          <Link to="./PanelChart/malanNight"><button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Panel
+              </p> 
+           </button></Link>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+            <Link to="./JodiChart/rajdhaniDay"><button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Jodi
+              </p> 
+           </button></Link>
+            </Col>
+          <Col className='' span={8}>
+              <p>  RAJDHANI DAY  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+          <Link to="./PanelChart/rajdhaniDay"><button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Panel
+              </p> 
+           </button></Link>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+            <Link to="./JodiChart/rajdhaniNight"><button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Jodi
+              </p> 
+           </button></Link>
+            </Col>
+          <Col className='' span={8}>
+              <p>  RAJDHANI NIGHT  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+          <Link to="./PanelChart/rajdhaniNight"> <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Panel
+              </p> 
+           </button></Link>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+            <Link to="./JodiChart/kamalDay"> <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Jodi
+              </p> 
+           </button></Link>
+            </Col>
+          <Col className='' span={8}>
+              <p>  KAMAL DAY  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+          <Link to="./PanelChart/kamalDay"> <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Panel
+              </p> 
+           </button></Link>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+            <Link to="./JodiChart/kamalNight"> <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Jodi
+              </p> 
+           </button></Link>
+            </Col>
+          <Col className='' span={8}>
+              <p>  KAMAL NIGHT  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+          <Link to="./PanelChart/kamalNight"> <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Panel
+              </p> 
+           </button></Link>
+          </Col>
+        </Row>
+        <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
+            <Col className='' span={8}> 
+            <Link to="./JodiChart/mainBazar"> <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Jodi
+              </p> 
+           </button></Link>
+            </Col>
+          <Col className='' span={8}>
+              <p>  MAIN BAZAR  </p>
+              <p> 129-29-360</p>  
+              <p>11:45 AM    12:45 PM</p>
+          </Col>
+          <Col className='' span={8}>  
+          <Link to="./PanelChart/mainBazar"> <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'12px'}}>
+              Panel
+              </p> 
+           </button></Link>
           </Col>
         </Row>
          </div>
@@ -198,8 +334,7 @@ const Main = () => {
          
         </button>
         </Link>  
-      </header> 
-    </div>
+     </div>
   );
 }
 

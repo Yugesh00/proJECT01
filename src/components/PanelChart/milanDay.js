@@ -9,6 +9,13 @@ const milanDayp = () => {
 
     return (
         <div className='card setCenter'>
+           <div className='card liveResultSection mb-4'>
+         <div className='card welcomeSection white-text'>
+          <span style={{fontSize:'25px'}}>
+          MILAN DAY
+          </span>
+         </div>
+      </div>
             <table style={{textAlign:'center'}} className="leaderboard1   chart-table" cellpadding="2">
             <thead>
    <tr>
