@@ -29,11 +29,11 @@ const Admin = () =>{
     return (
       <div className="App1" style={{backgroundColor:'#fff'}}>  
       
-      <div className='card  headSection'>
+      {/* <div className='card  headSection'>
         <span style={{fontWeight:'14px'}}>
           DPBoss.net
          </span>
-      </div>
+      </div> */}
        <div className='card elegant-color white-text  welcomeSection'>
         {/* <marquee  direction="left" style={{fontWeight:'10px'}}>
         !! Welcome Friends in the world of DPBoss.net in INDIA. May you always Win. !!

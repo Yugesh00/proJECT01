@@ -3,16 +3,90 @@ import { MDBContainer, MDBRow, MDBCol, MDBListGroupItem } from "mdbreact";
 import { Link } from "react-router-dom";
 import DataService from "../../services/database" 
 import './../table.css'
+import { Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
+import firebase from "./../firebase";
+
+const db = firebase;
 
 
-const timeBazarj = () => { 
+const TimeBazarj = () => { 
+   const [loading, setLoading] = useState(true);
+   const [myList, setMyList] = useState(true);
 
+   useEffect(() => {
+      getUser()
+    }, [loading]); 
+
+    const getUser = () =>{
+      const getPostsFromFirebase = [];
+      const subscriber = db.collection("market_charts").doc("kalyan").collection("panel")
+        .onSnapshot((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            getPostsFromFirebase.push({
+              ...doc.data(),  
+              key: doc.id, 
+            });
+          });
+           Arr(getPostsFromFirebase);
+           
+           setLoading(false);
+        });
+   
+      // console.log(list)
+      return () => subscriber();
+   }
+   
+   const Arr = (arr) => { 
+   let res = arr.reduce((acc, {week, number}) =>
+   {
+       acc[week] = acc[week] || new Set();
+       acc[week].add(number);
+       return acc;
+   }, {})
+   
+   res = Object.entries(res).map(
+       ([week, numbers]) => ({week, number: [...numbers]})
+   );
+   setMyList(res); 
+   console.log(res);
+   }
+
+
+   const handleScroll = () => {
+      window.scroll({
+        top: document.documentElement.scrollHeight
+      });
+    }
+
+    const goToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    };
+
+   
+   if (loading){
+   return <Spin className="mt-5" size="large" />
+    }
+   
   return (
      
 	    <div className='card setCenter'>
+            <button onClick={handleScroll}  className='mt-4 refreshBtn'>
+                 <p  style={{fontSize:'15px'}}>
+              Bottom
+              </p> </button>
+                 <Link to="/"> 
+            <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'15px'}}>
+              Home
+              </p> 
+           </button>
+           </Link>         
           <div className='card liveResultSection mb-4'>
          <div className='card welcomeSection white-text'>
-          <span style={{fontSize:'25px'}}>
+     <span style={{fontSize:'25px'}}>
           TIME BAZAR
           </span>
          </div>
@@ -2136,10 +2210,31 @@ const timeBazarj = () => {
          <td  className="">46</td>
          <td></td>
       </tr>
+      {myList.map(current => {
+        return (  
+              <tr> 
+                {current.number.map(num => {
+                  return <td>{num}</td>;
+                })}
+              </tr> 
+        );
+      })}
    </tbody>
 </table>
+   <button onClick={goToTop}  className='mt-4 refreshBtn'>
+            <p  style={{fontSize:'15px'}}>
+              Top
+              </p> 
+              </button>
+            <Link to="/"> 
+            <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'15px'}}>
+              Home
+              </p> 
+           </button>
+           </Link>
             </div>
   );
 }
 
-export default timeBazarj;
+export default TimeBazarj;

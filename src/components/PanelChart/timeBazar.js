@@ -10,6 +10,7 @@ const db = firebase;
 
 const TimeBazarp = () => { 
    const [loading, setLoading] = useState(true);
+   const [myList, setMyList] = useState(true);
 
    
    useEffect(() => {
@@ -27,10 +28,8 @@ const TimeBazarp = () => {
             });
           });
           console.log(getPostsFromFirebase)
-          var data = Arr(getPostsFromFirebase);
-          
-          console.log(data)
-          
+          Arr(getPostsFromFirebase);
+            
            setLoading(false);
         });
    
@@ -38,8 +37,7 @@ const TimeBazarp = () => {
       return () => subscriber();
    }
    
-   const Arr = (arr) => {
-   
+   const Arr = (arr) => { 
    let res = arr.reduce((acc, {week, number}) =>
    {
        acc[week] = acc[week] || new Set();
@@ -50,16 +48,42 @@ const TimeBazarp = () => {
    res = Object.entries(res).map(
        ([week, numbers]) => ({week, number: [...numbers]})
    );
-   
+   setMyList(res); 
    console.log(res);
    }
    
+   
+   const handleScroll = () => {
+      window.scroll({
+         top: document.documentElement.scrollHeight,
+         behavior: 'smooth',
+       });
+    }
+   
+    const goToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    };
+
    if (loading){
    return <Spin className="mt-5" size="large" />
     }
    
     return (
         <div className='card setCenter'>
+                 <button onClick={handleScroll}  className='mt-4 refreshBtn'>
+                 <p  style={{fontSize:'15px'}}>
+              Bottom
+              </p> </button>
+                 <Link to="/"> 
+            <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'15px'}}>
+              Home
+              </p> 
+           </button>
+           </Link>
            <div className='card liveResultSection mb-4'>
          <div className='card welcomeSection white-text'>
           <span style={{fontSize:'25px'}}>
@@ -5694,10 +5718,41 @@ const TimeBazarp = () => {
       <td className="">46</td>
       <td className="">2<br/>4<br/>0</td>
       </tr>
+      {myList.map(current => {
+        return (  
+              <tr> 
+                <td>
+                {current.week.split("to")[0]}
+                <br/>to<br/>
+                {current.week.split("to")[1]}
+                </td> 
+            
+                {current.number.map(num => {
+                  return ( <>
+                  <td className=""> {num.split("-")[0].charAt(0)}<br/> {num.split("-")[0].charAt(1)}<br/> {num.split("-")[0].charAt(2)}</td>
+                  <td className=""> {num.split("-")[1]}</td>
+                  <td className=""> {num.split("-")[2].charAt(0)}<br/> {num.split("-")[2].charAt(1)}<br/> {num.split("-")[2].charAt(2)}</td>
+                  </>
+                  )
+                })}
+              </tr> 
+        );
+      })}
 </tbody>
             </table>
-
-        </div>
+            <button onClick={goToTop}  className='mt-4 refreshBtn'>
+            <p  style={{fontSize:'15px'}}>
+              Top
+              </p> 
+              </button>
+            <Link to="/"> 
+            <button type="button"  className='mt-4 refreshBtn'>
+              <p  style={{fontSize:'15px'}}>
+              Home
+              </p> 
+           </button>
+           </Link>
+         </div>
 
 );
 }

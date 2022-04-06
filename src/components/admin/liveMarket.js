@@ -110,13 +110,13 @@ const LiveResult = () =>{
             if(today !== today1){
               if(setMonday.getDay() === 0){  
                 db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
-                  [dayToday()]: number1, 
+                  number: number1, 
                   currentTime:  ' ' + new Date(),
                   isMonday: true, 
                   week: setWeek()
                 }).then((ref) => { console.log('ref')});
                 db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
-                  [dayToday()]: panelNumber[1],
+                  number: panelNumber[1],
                   currentTime:  ' ' + new Date(),
                   week: setWeek() 
                 }).then((ref) => { console.log('ref')});
@@ -131,12 +131,12 @@ const LiveResult = () =>{
               }
               else{
                 db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
-                  [dayToday()]: number1, 
+                  number: number1, 
                   currentTime: ' ' + new Date(),
                   week:currentWeek
                 }).then((ref) => { console.log('ref')});
                 db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
-                  [dayToday()]: panelNumber[1], 
+                  number: panelNumber[1], 
                   currentTime:  ' ' + new Date(),
                   week:currentWeek
                 }).then((ref) => { console.log('ref')});
@@ -154,13 +154,13 @@ const LiveResult = () =>{
             else{
                  if(setMonday.getDay() === 0){  
                   db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
-                    [dayToday()]: number1, 
+                    number: number1, 
                     currentTime: ' ' + new Date(),
                     isMonday: true, 
                     week: setWeek()
                   }).then((ref) => { console.log('ref')});
                   db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
-                    [dayToday()]: panelNumber[1], 
+                    number: panelNumber[1], 
                     currentTime:  ' ' + new Date()
                   }).then((ref) => { console.log('ref')});
                   const subscriber = db.collection("market_charts").doc("kalyan").update({
@@ -173,11 +173,11 @@ const LiveResult = () =>{
                 }
                 else{
                    db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
-                    [dayToday()]: number1,
+                    number: number1,
                      week:currentWeek
                   }).then((ref) => { console.log('ref')});
                   db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
-                    [dayToday()]: panelNumber[1],
+                    number: panelNumber[1],
                     week:currentWeek
                   }).then((ref) => { console.log('ref')});
                   const subscriber = db.collection("market_charts").doc("kalyan").update({
