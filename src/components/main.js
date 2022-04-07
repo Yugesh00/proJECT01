@@ -327,7 +327,7 @@ const Main = () => {
          </div>
       </div>
        <Link to={"/login"}>
-      <button>
+      <button  className='mt-4 refreshBtn'>
          <span style={{fontWeight:'14px'}}>
          Login
          </span>
