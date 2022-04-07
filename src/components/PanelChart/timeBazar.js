@@ -76,17 +76,23 @@ const TimeBazarp = () => {
    
     return (
         <div className='card setCenter'>
-                 <button onClick={handleScroll}  className='mt-4 refreshBtn'>
+             <Row >
+        <Col className='ss pr-2' span={12}>
+        <button onClick={handleScroll}  className='mt-4 refreshBtn'>
                  <p  style={{fontSize:'15px'}}>
               Bottom
               </p> </button>
-                 <Link to="/"> 
+        </Col>
+      <Col className='  ss pl-2' span={12}>
+      <Link to="/"> 
             <button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'15px'}}>
               Home
               </p> 
            </button>
            </Link>
+       </Col>
+    </Row>
            <div className='card liveResultSection mb-4'>
          <div className='card welcomeSection white-text'>
           <span style={{fontSize:'25px'}}>
@@ -5743,18 +5749,25 @@ const TimeBazarp = () => {
       })}
 </tbody>
             </table>
-            <button onClick={goToTop}  className='mt-4 refreshBtn'>
+               
+            <Row >
+        <Col className='ss pr-2' span={12}>
+        <button onClick={goToTop}  className='mt-4 refreshBtn'>
             <p  style={{fontSize:'15px'}}>
               Top
               </p> 
               </button>
-            <Link to="/"> 
+        </Col>
+      <Col className='  ss pl-2' span={12}>
+      <Link to="/"> 
             <button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'15px'}}>
               Home
               </p> 
            </button>
            </Link>
+       </Col>
+    </Row>
          </div>
 
 );
