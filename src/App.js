@@ -27,6 +27,7 @@ import milanDayj from "./components/JodiChart/milanDay"
 import milanNightj from "./components/JodiChart/milanNight"
 import milanNightp from "./components/PanelChart/milanNight"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import Login from './components/login'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 class App extends Component {
   render() {
@@ -49,6 +50,7 @@ class App extends Component {
       <Router basename={process.env.REACT_APP_BASENAME || ""}>
     <div>
     <Route exact path={["/","/main"]} component={Main}/>
+    <Route exact path={["/login"]} component={Login}/>
     <Route exact path={"/selection"} component={Type}/>
     <Route exact path={"/user"} component={GetUser}/> 
     <Route exact path={"/admin"} component={Admin}/> 

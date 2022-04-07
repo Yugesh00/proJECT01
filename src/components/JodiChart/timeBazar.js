@@ -27,7 +27,12 @@ const TimeBazarj = () => {
               key: doc.id, 
             });
           });
-           Arr(getPostsFromFirebase);
+         getPostsFromFirebase.sort(function(a, b) {
+            var c = new Date(a.key);
+            var d = new Date(b.key);
+            return c-d;
+        });
+         Arr(getPostsFromFirebase);
            
            setLoading(false);
         });

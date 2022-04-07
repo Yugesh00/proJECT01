@@ -27,9 +27,13 @@ const TimeBazarp = () => {
               key: doc.id, 
             });
           });
-          console.log(getPostsFromFirebase)
-          Arr(getPostsFromFirebase);
-            
+            getPostsFromFirebase.sort(function(a, b) {
+            var c = new Date(a.key);
+            var d = new Date(b.key);
+            return c-d;
+        });
+        console.log(getPostsFromFirebase+ 'sssss')
+         Arr(getPostsFromFirebase);            
            setLoading(false);
         });
    
@@ -49,8 +53,7 @@ const TimeBazarp = () => {
        ([week, numbers]) => ({week, number: [...numbers]})
    );
    setMyList(res); 
-   console.log(res);
-   }
+    }
    
    
    const handleScroll = () => {

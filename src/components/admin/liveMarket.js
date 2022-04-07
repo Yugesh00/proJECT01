@@ -3,7 +3,7 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import {BrowserRouter as Router, Route, Link, Redirect   } from "react-router-dom";
  import firebase from "../firebase";
 import { Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
-
+import moment from 'moment';
 const db = firebase;
  
 const { TabPane } = Tabs;
@@ -86,109 +86,65 @@ const LiveResult = () =>{
         }
 
         const setWeek = () => {
-          const today = new Date();
-          var nextDate = new Date(new Date().setDate(new Date().getDate() + 6))
-           console.log(nextDate)
-          const yyyy = today.getFullYear();
-          let mm = today.getMonth() + 1; 
-          let dd = today.getDate(); 
-          const yyyy1 = nextDate.getFullYear();
-          let mm1 = nextDate.getMonth() + 1; 
-          let dd1 = nextDate.getDate(); 
-          if (dd < 10) dd = '0' + dd;
-          if (mm < 10) mm = '0' + mm; 
-          if (dd1 < 10) dd1 = '0' + dd1;
-          if (mm1 < 10) mm1 = '0' + mm1;
-          return dd + '-' + mm + '-' + yyyy + ' to ' + dd1 + '-' + mm1 + '-' + yyyy1; 
+          moment.updateLocale('en', {
+            week: {
+              dow : 1,  
+            }
+          });
+          var startOfWeek = moment().startOf('week').toDate();
+          var startOfWeek1 = moment(startOfWeek).format("DD-MM-YYYY");
+          var endOfWeek   = moment().endOf('week').toDate();
+  
+          var endOfWeek1 = moment(endOfWeek).format("DD-MM-YYYY")
+  
+          return startOfWeek1 + ' to ' + endOfWeek1; 
       }
-          
-            
+        
+     
         const saveBtn1 = () => {
             var today = setToday();
             var panelNumber = number1.split('-')
             var setMonday = new Date();
             if(today !== today1){
-              if(setMonday.getDay() === 0){  
                 db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
                   number: number1, 
-                  currentTime:  ' ' + new Date(),
-                  isMonday: true, 
-                  week: setWeek()
-                }).then((ref) => { console.log('ref')});
-                db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
-                  number: panelNumber[1],
-                  currentTime:  ' ' + new Date(),
-                  week: setWeek() 
-                }).then((ref) => { console.log('ref')});
-                const subscriber = db.collection("market_charts").doc("kalyan").update({
-                  number: number1,
-                  today: setToday(),
-                  week: setWeek()
-               })
-               getUser();
-               editSection1();
-               return () => subscriber();
-              }
-              else{
-                db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
-                  number: number1, 
-                  currentTime: ' ' + new Date(),
-                  week:currentWeek
+                  week:setWeek(),
+                  date:setToday()
                 }).then((ref) => { console.log('ref')});
                 db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
                   number: panelNumber[1], 
-                  currentTime:  ' ' + new Date(),
-                  week:currentWeek
+                  week:setWeek(),
+                  date: setToday()
                 }).then((ref) => { console.log('ref')});
                 const subscriber = db.collection("market_charts").doc("kalyan").update({
                   number: number1,
                   today: setToday(),
-                  week:currentWeek
-               })
+                  week:setWeek()
+                })
                getUser();
                editSection1();
                return () => subscriber();
-              }
-               
             }
-            else{
-                 if(setMonday.getDay() === 0){  
-                  db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
-                    number: number1, 
-                    currentTime: ' ' + new Date(),
-                    isMonday: true, 
-                    week: setWeek()
-                  }).then((ref) => { console.log('ref')});
-                  db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
-                    number: panelNumber[1], 
-                    currentTime:  ' ' + new Date()
-                  }).then((ref) => { console.log('ref')});
-                  const subscriber = db.collection("market_charts").doc("kalyan").update({
-                    number: number1,
-                      today: setToday()
-                   })
-                   getUser();
-                   editSection1();
-                    return () => subscriber();
-                }
-                else{
+            else{ 
                    db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
                     number: number1,
-                     week:currentWeek
+                    week:setWeek(),
+                    date:setToday()
                   }).then((ref) => { console.log('ref')});
                   db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
                     number: panelNumber[1],
-                    week:currentWeek
+                    week:setWeek(),
+                    date:setToday()
                   }).then((ref) => { console.log('ref')});
                   const subscriber = db.collection("market_charts").doc("kalyan").update({
                       number: number1,
                       today: setToday(),
-                      week:currentWeek
+                      week:setWeek() 
                    })
                    getUser();
                    editSection1();
                     return () => subscriber();
-                } 
+                 
             }  
         }
 
@@ -218,7 +174,7 @@ const LiveResult = () =>{
         
         useEffect(() => {
             getUser()
-          }, [loading]);  
+           }, [loading]);  
         
        const getUser = () =>{
             const getPostsFromFirebase = [];

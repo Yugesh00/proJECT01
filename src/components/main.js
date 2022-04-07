@@ -326,7 +326,7 @@ const Main = () => {
         </Row>
          </div>
       </div>
-       <Link to={"/admin"}>
+       <Link to={"/login"}>
       <button>
          <span style={{fontWeight:'14px'}}>
          Login
