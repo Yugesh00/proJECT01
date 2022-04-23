@@ -62,12 +62,12 @@ const Admin = () =>{
       
       {/* <div className='card  headSection'>
         <span style={{fontWeight:'14px'}}>
-          DPBoss.net
+          Sattabjar.com
          </span>
       </div> */}
        <div className='card elegant-color white-text  welcomeSection'>
         {/* <marquee  direction="left" style={{fontWeight:'10px'}}>
-        !! Welcome Friends in the world of DPBoss.net in INDIA. May you always Win. !!
+        !! Welcome Friends in the world of Sattabjar.com in INDIA. May you always Win. !!
          </marquee>  */}
       </div>
       <div className=" ">
