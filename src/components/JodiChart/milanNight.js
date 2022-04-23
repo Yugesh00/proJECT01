@@ -1421,6 +1421,15 @@ const MilanNightj = () => {
          <td  className="">62</td>
          <td  className="r">27</td>
       </tr>
+      {myList.map(current => {
+        return (  
+              <tr> 
+                {current.number.map(num => {
+                  return <td>{num}</td>;
+                })}
+              </tr> 
+        );
+      })}
    </tbody>
 </table>
 <Row >

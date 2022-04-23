@@ -3556,6 +3556,26 @@ return <Spin className="mt-5" size="large" />
       <td className="r">27</td>
       <td className="r">4<br/>6<br/>7</td>
    </tr>
+   {myList.map(current => {
+        return (  
+              <tr> 
+                <td>
+                {current.week.split("to")[0]}
+                <br/>to<br/>
+                {current.week.split("to")[1]}
+                </td> 
+            
+                {current.number.map(num => {
+                  return ( <>
+                  <td className=""> {num.split("-")[0].charAt(0)}<br/> {num.split("-")[0].charAt(1)}<br/> {num.split("-")[0].charAt(2)}</td>
+                  <td className=""> {num.split("-")[1]}</td>
+                  <td className=""> {num.split("-")[2].charAt(0)}<br/> {num.split("-")[2].charAt(1)}<br/> {num.split("-")[2].charAt(2)}</td>
+                  </>
+                  )
+                })}
+              </tr> 
+        );
+      })}
 </tbody>
             </table>
             <Row >

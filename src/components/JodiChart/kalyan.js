@@ -2221,6 +2221,15 @@ const Kalyanj = () => {
          <td  className="">93</td>
          <td  className="">68</td>
       </tr>
+      {myList.map(current => {
+        return (  
+              <tr> 
+                {current.number.map(num => {
+                  return <td>{num}</td>;
+                })}
+              </tr> 
+        );
+      })}
    </tbody>
 
 

@@ -1586,6 +1586,15 @@ const MilanDayj = () => {
          <td  className="r">44</td>
          <td></td>
       </tr>
+      {myList.map(current => {
+        return (  
+              <tr> 
+                {current.number.map(num => {
+                  return <td>{num}</td>;
+                })}
+              </tr> 
+        );
+      })}
    </tbody>
 </table>
 <Row >

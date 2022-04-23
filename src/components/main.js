@@ -78,19 +78,19 @@ const Main = () => {
         </Row>
         <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
             <Col className='' span={8}> 
-            <Link to="./JodiChart/malanDay"><button type="button"  className='mt-4 refreshBtn'>
+            <Link to="./JodiChart/milanDay"><button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Jodi
               </p> 
            </button></Link>
             </Col>
           <Col className='' span={8}>
-              <p>  MALAN DAY  </p>
+              <p>  MILAN DAY  </p>
               <p> 129-29-360</p>  
               <p>11:45 AM    12:45 PM</p>
           </Col>
           <Col className='' span={8}>  
-          <Link to="./PanelChart/malanDay"><button type="button"  className='mt-4 refreshBtn'>
+          <Link to="./PanelChart/milanDay"><button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Panel
               </p> 
@@ -120,19 +120,19 @@ const Main = () => {
         </Row>
         <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
             <Col className='' span={8}> 
-            <Link to="./JodiChart/malanNight"><button type="button"  className='mt-4 refreshBtn'>
+            <Link to="./JodiChart/milanNight"><button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Jodi
               </p> 
            </button></Link>
             </Col>
           <Col className='' span={8}>
-              <p>  MALAN NIGHT  </p>
+              <p>  MILAN NIGHT  </p>
               <p> 129-29-360</p>  
               <p>11:45 AM    12:45 PM</p>
           </Col>
           <Col className='' span={8}>  
-          <Link to="./PanelChart/malanNight"><button type="button"  className='mt-4 refreshBtn'>
+          <Link to="./PanelChart/milanNight"><button type="button"  className='mt-4 refreshBtn'>
               <p  style={{fontSize:'12px'}}>
               Panel
               </p> 
@@ -260,13 +260,13 @@ const Main = () => {
             <p> <Link to="./JodiChart/timeBazar">Time Bazar</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./JodiChart/malanDay"> Malan Day</Link> </p> 
+            <p><Link to="./JodiChart/milanDay"> Milan Day</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./JodiChart/kalyan"> Kalyan </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./JodiChart/malanNight"> Malan Night </Link></p> 
+            <p><Link to="./JodiChart/milanNight"> Milan Night </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./JodiChart/rajdhaniDay"> Rajdhani Day </Link></p> 
@@ -300,13 +300,13 @@ const Main = () => {
             <p> <Link to="./PanelChart/timeBazar">Time Bazar</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./PanelChart/malanDay"> Malan Day</Link> </p> 
+            <p><Link to="./PanelChart/milanDay"> Milan Day</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./PanelChart/kalyan"> Kalyan </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./PanelChart/malanNight"> Malan Night </Link></p> 
+            <p><Link to="./PanelChart/milanNight"> Milan Night </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./PanelChart/rajdhaniDay"> Rajdhani Day </Link></p> 

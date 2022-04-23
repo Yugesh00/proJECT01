@@ -2204,6 +2204,15 @@ const RajdhaniNightj = () => {
          <td  className="">39</td>
          <td  className="">01</td>
       </tr>
+      {myList.map(current => {
+        return (  
+              <tr> 
+                {current.number.map(num => {
+                  return <td>{num}</td>;
+                })}
+              </tr> 
+        );
+      })}
    </tbody>
 </table>
 <Row >

@@ -2355,6 +2355,15 @@ const MainBazarj = () => {
          <td  className="">46</td>
          <td  className="">42</td>
       </tr>
+      {myList.map(current => {
+        return (  
+              <tr> 
+                {current.number.map(num => {
+                  return <td>{num}</td>;
+                })}
+              </tr> 
+        );
+      })}
    </tbody>
 </table>
 <Row >
