@@ -19,7 +19,7 @@ const RajdhaniNightj = () => {
 
     const getUser = () =>{
       const getPostsFromFirebase = [];
-      const subscriber = db.collection("market_charts").doc("kalyan").collection("panel")
+      const subscriber = db.collection("market_charts").doc("rajdhaniNight").collection("panel")
         .onSnapshot((querySnapshot) => {
           querySnapshot.forEach((doc) => {
             getPostsFromFirebase.push({

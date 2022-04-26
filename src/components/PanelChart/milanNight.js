@@ -18,7 +18,7 @@ useEffect(() => {
 
  const getUser = () =>{
    const getPostsFromFirebase = [];
-   const subscriber = db.collection("market_charts").doc("kalyan").collection("jodi")
+   const subscriber = db.collection("market_charts").doc("milanNight").collection("jodi")
      .onSnapshot((querySnapshot) => {
        querySnapshot.forEach((doc) => {
          getPostsFromFirebase.push({

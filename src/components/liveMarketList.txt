@@ -13,3 +13,24 @@ Jodi
 Rajdhani Day
 Kamal day
 
+
+
+/JodiChart/timeBazar
+/JodiChart/milanDay
+/JodiChart/kalyan
+/JodiChart/milanNight
+/JodiChart/rajdhaniDay
+/JodiChart/rajdhaniNight
+/JodiChart/kamalDay
+/JodiChart/kamalNight
+/JodiChart/mainBazar
+
+/PanelChart/timeBazar
+/PanelChart/milanDay
+/PanelChart/kalyan
+/PanelChart/milanNight
+/PanelChart/rajdhaniDay
+/PanelChart/rajdhaniNight
+/PanelChart/kamalDay
+/PanelChart/kamalNight
+/PanelChart/mainBazar

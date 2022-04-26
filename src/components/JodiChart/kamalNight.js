@@ -18,7 +18,7 @@ const KamalNightj = () => {
 
     const getUser = () =>{
       const getPostsFromFirebase = [];
-      const subscriber = db.collection("market_charts").doc("kalyan").collection("panel")
+      const subscriber = db.collection("market_charts").doc("kamalNight").collection("panel")
         .onSnapshot((querySnapshot) => {
           querySnapshot.forEach((doc) => {
             getPostsFromFirebase.push({
