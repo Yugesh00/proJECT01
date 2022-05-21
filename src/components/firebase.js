@@ -11,16 +11,22 @@ import firebase from 'firebase';
 // };
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA38EKjnfWeAQy3D_-aN715t-u094mKZk4",
-    authDomain: "newproject-cdd1b.firebaseapp.com",
-    projectId: "newproject-cdd1b",
-    storageBucket: "newproject-cdd1b.appspot.com",
-    messagingSenderId: "545067056264",
-    appId: "1:545067056264:web:0e7248e5275894a5c3733d",
-    measurementId: "G-8QJ71WR5EZ"
+    apiKey: "AIzaSyCFE-YohT5nRdrcoMy_Ryu1PJFgPjSUpVk",
+    authDomain: "sattabjar-9aa02.firebaseapp.com",
+    projectId: "sattabjar-9aa02",
+    storageBucket: "sattabjar-9aa02.appspot.com",
+    messagingSenderId: "1067577335749",
+    appId: "1:1067577335749:web:b10948834871e9b6bdf5ac",
+    measurementId: "G-ZV8Z236FWZ"
   };
-
-  
+  // apiKey: "AIzaSyA38EKjnfWeAQy3D_-aN715t-u094mKZk4",
+  // authDomain: "newproject-cdd1b.firebaseapp.com",
+  // projectId: "newproject-cdd1b",
+  // storageBucket: "newproject-cdd1b.appspot.com",
+  // messagingSenderId: "545067056264",
+  // appId: "1:545067056264:web:0e7248e5275894a5c3733d",
+  // measurementId: "G-8QJ71WR5EZ"
+ 
 firebase.initializeApp(firebaseConfig);
 var database = firebase.firestore();
 // var db = firebase.firestore();

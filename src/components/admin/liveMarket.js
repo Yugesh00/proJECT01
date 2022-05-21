@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import {BrowserRouter as Router, Route, Link, Redirect   } from "react-router-dom";
  import firebase from "../firebase";
-import { Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
+import { notification, Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
 import moment from 'moment';
 const db = firebase;
  
@@ -181,6 +181,13 @@ const editSection8 = () => {
                 } 
     }
 
+    const showSuccess = () => {
+      notification.success({message:'Successfully Saved!!'});
+    };
+
+    const showError = () => {
+      notification.error({message:'Failed to Save!!'});
+    };
 
 
 
@@ -239,43 +246,43 @@ const editSection8 = () => {
             var panelNumber = number1.split('-')
             var setMonday = new Date();
             if(today !== today1){
-                db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
+                db.collection("market_charts").doc("timeBazer").collection("jodi").doc(today).set({
                   number: number1, 
                   week:setWeek(),
                   date:setToday()
                 }).then((ref) => { console.log('ref')});
-                db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
+                db.collection("market_charts").doc("timeBazer").collection("panel").doc(today).set({
                   number: panelNumber[1], 
                   week:setWeek(),
                   date: setToday()
                 }).then((ref) => { console.log('ref')});
-                const subscriber = db.collection("market_charts").doc("kalyan").update({
+                const subscriber = db.collection("market_charts").doc("timeBazer").update({
                   number: number1,
                   today: setToday(),
                   week:setWeek()
                 })
                getUser();
-               editSection1();
+               editSection1(); showSuccess();
                return () => subscriber();
             }
             else{ 
-                   db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
+                   db.collection("market_charts").doc("timeBazer").collection("jodi").doc(today).update({
                     number: number1,
                     week:setWeek(),
                     date:setToday()
                   }).then((ref) => { console.log('ref')});
-                  db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
+                  db.collection("market_charts").doc("timeBazer").collection("panel").doc(today).update({
                     number: panelNumber[1],
                     week:setWeek(),
                     date:setToday()
                   }).then((ref) => { console.log('ref')});
-                  const subscriber = db.collection("market_charts").doc("kalyan").update({
+                  const subscriber = db.collection("market_charts").doc("timeBazer").update({
                       number: number1,
                       today: setToday(),
                       week:setWeek() 
                    })
                    getUser();
-                   editSection1();
+                   editSection1(); showSuccess();
                     return () => subscriber();
                  
             }  
@@ -302,7 +309,7 @@ const editSection8 = () => {
                   week:setWeek()
                 })
                getUser();
-               editSection1();
+               editSection2(); showSuccess();
                return () => subscriber();
             }
             else{ 
@@ -322,7 +329,7 @@ const editSection8 = () => {
                       week:setWeek() 
                    })
                    getUser();
-                   editSection1();
+                   editSection2(); showSuccess();
                     return () => subscriber();
                  
             }  
@@ -333,43 +340,43 @@ const editSection8 = () => {
           var panelNumber = number3.split('-')
           var setMonday = new Date();
           if(today !== today3){
-              db.collection("market_charts").doc("milanDay").collection("jodi").doc(today).set({
+              db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).set({
                 number: number3, 
                 week:setWeek(),
                 date:setToday()
               }).then((ref) => { console.log('ref')});
-              db.collection("market_charts").doc("milanDay").collection("panel").doc(today).set({
+              db.collection("market_charts").doc("kalyan").collection("panel").doc(today).set({
                 number: panelNumber[1], 
                 week:setWeek(),
                 date: setToday()
               }).then((ref) => { console.log('ref')});
-              const subscriber = db.collection("market_charts").doc("milanDay").update({
+              const subscriber = db.collection("market_charts").doc("kalyan").update({
                 number: number3,
                 today: setToday(),
                 week:setWeek()
               })
              getUser();
-             editSection1();
+             editSection3(); showSuccess();
              return () => subscriber();
           }
           else{ 
-                 db.collection("market_charts").doc("milanDay").collection("jodi").doc(today).update({
+                 db.collection("market_charts").doc("kalyan").collection("jodi").doc(today).update({
                   number: number3,
                   week:setWeek(),
                   date:setToday()
                 }).then((ref) => { console.log('ref')});
-                db.collection("market_charts").doc("milanDay").collection("panel").doc(today).update({
+                db.collection("market_charts").doc("kalyan").collection("panel").doc(today).update({
                   number: panelNumber[1],
                   week:setWeek(),
                   date:setToday()
                 }).then((ref) => { console.log('ref')});
-                const subscriber = db.collection("market_charts").doc("milanDay").update({
+                const subscriber = db.collection("market_charts").doc("kalyan").update({
                     number: number3,
                     today: setToday(),
                     week:setWeek() 
                  })
                  getUser();
-                 editSection1();
+                 editSection3(); showSuccess();
                   return () => subscriber(); 
           }  
         }
@@ -395,7 +402,7 @@ const editSection8 = () => {
                 week:setWeek1()
               })
              getUser();
-             editSection1();
+             editSection4(); showSuccess();
              return () => subscriber();
           }
           else{ 
@@ -415,7 +422,7 @@ const editSection8 = () => {
                     week:setWeek1() 
                  })
                  getUser();
-                 editSection1();
+                 editSection4(); showSuccess();
                   return () => subscriber(); 
           }  
         }
@@ -441,7 +448,7 @@ const editSection8 = () => {
                 week:setWeek2()
               })
              getUser();
-             editSection1();
+             editSection5(); showSuccess();
              return () => subscriber();
           }
           else{ 
@@ -461,7 +468,7 @@ const editSection8 = () => {
                     week:setWeek() 
                  })
                  getUser();
-                 editSection1();
+                 editSection5(); showSuccess();
                   return () => subscriber(); 
           }  
         }
@@ -488,7 +495,7 @@ const editSection8 = () => {
                 week:setWeek1()
               })
              getUser();
-             editSection1();
+             editSection6(); showSuccess();
              return () => subscriber();
           }
           else{ 
@@ -508,7 +515,7 @@ const editSection8 = () => {
                     week:setWeek1() 
                  })
                  getUser();
-                 editSection1();
+                 editSection6(); showSuccess();
                   return () => subscriber(); 
           }  
         }
@@ -518,43 +525,43 @@ const editSection8 = () => {
           var panelNumber = number7.split('-')
           var setMonday = new Date();
           if(today !== today7){
-              db.collection("market_charts").doc("rajdhaniDay").collection("jodi").doc(today).set({
+              db.collection("market_charts").doc("kamalDay").collection("jodi").doc(today).set({
                 number: number7, 
                 week:setWeek1(),
                 date:setToday()
               }).then((ref) => { console.log('ref')});
-              db.collection("market_charts").doc("rajdhaniDay").collection("panel").doc(today).set({
+              db.collection("market_charts").doc("kamalDay").collection("panel").doc(today).set({
                 number: panelNumber[1], 
                 week:setWeek1(),
                 date: setToday()
               }).then((ref) => { console.log('ref')});
-              const subscriber = db.collection("market_charts").doc("rajdhaniDay").update({
+              const subscriber = db.collection("market_charts").doc("kamalDay").update({
                 number: number7,
                 today: setToday(),
                 week:setWeek1()
               })
              getUser();
-             editSection1();
+             editSection7(); showSuccess();
              return () => subscriber();
           }
           else{ 
-                 db.collection("market_charts").doc("rajdhaniDay").collection("jodi").doc(today).update({
+                 db.collection("market_charts").doc("kamalDay").collection("jodi").doc(today).update({
                   number: number7,
                   week:setWeek1(),
                   date:setToday()
                 }).then((ref) => { console.log('ref')});
-                db.collection("market_charts").doc("rajdhaniDay").collection("panel").doc(today).update({
+                db.collection("market_charts").doc("kamalDay").collection("panel").doc(today).update({
                   number: panelNumber[1],
                   week:setWeek1(),
                   date:setToday()
                 }).then((ref) => { console.log('ref')});
-                const subscriber = db.collection("market_charts").doc("rajdhaniDay").update({
+                const subscriber = db.collection("market_charts").doc("kamalDay").update({
                     number: number7,
                     today: setToday(),
                     week:setWeek1() 
                  })
                  getUser();
-                 editSection1();
+                 editSection7(); showSuccess();
                   return () => subscriber(); 
           }  
         }
@@ -581,7 +588,7 @@ const editSection8 = () => {
                 week:setWeek1()
               })
              getUser();
-             editSection1();
+             editSection8(); showSuccess();
              return () => subscriber();
           }
           else{ 
@@ -601,7 +608,7 @@ const editSection8 = () => {
                     week:setWeek1() 
                  })
                  getUser();
-                 editSection1();
+                 editSection8(); showSuccess();
                   return () => subscriber(); 
           }  
         }
@@ -628,7 +635,7 @@ const editSection8 = () => {
                 week:setWeek2()
               })
              getUser();
-             editSection1();
+             editSection9(); showSuccess();
              return () => subscriber();
           }
           else{ 
@@ -648,7 +655,7 @@ const editSection8 = () => {
                     week:setWeek() 
                  })
                  getUser();
-                 editSection1();
+                 editSection9(); showSuccess();
                   return () => subscriber(); 
           }  
         }
@@ -889,7 +896,7 @@ const editSection8 = () => {
          </p> 
       </button>
       {show7 && 
-      <button onClick={saveBtn7} disabled={disabled1} type="button"  className='saveBtn'>
+      <button onClick={saveBtn7}  type="button"  className='saveBtn'>
          <p  style={{fontSize:'12px'}}>
          Save
          </p> 

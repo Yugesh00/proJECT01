@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import {BrowserRouter as Router, Route, Link, Redirect   } from "react-router-dom";
  import firebase from "../firebase";
-import { Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
+import { notification, Tabs, Button,  Row, Col, Checkbox, Input, Spin  } from 'antd';
 
 const db = firebase;
  
@@ -30,6 +30,16 @@ const LiveResult = () =>{
     const [number2, setNumber2] = useState("")
     const [number3, setNumber3] = useState("")
     const [loading, setLoading] = useState(true);
+
+    
+    const showSuccess = () => {
+      notification.success({message:'Successfully Saved!!'});
+    };
+
+    const showError = () => {
+      notification.error({message:'Failed to Save!!'});
+    };
+
 
     const editSection1 = () => {
       if(disabled1 === true){
@@ -66,33 +76,56 @@ const LiveResult = () =>{
 
             
         const saveBtn1 = () => {
+          try{
             const subscriber = db.collection("live_result").doc("number1").update({
                 name: name1, 
                 number: number1
               })
               getUser();
               editSection1();
+              showSuccess();
           return () => subscriber();
+          }
+          catch(error){
+          console.log(error)
+          showError();
+          } 
         }
 
         const saveBtn2 = () => {
+          try{
             const subscriber = db.collection("live_result").doc("number2").update({
                 name: name2, 
                 number: number2
               })
               getUser();
               editSection2();
+              showSuccess();
           return () => subscriber();
+         }
+        catch(error){
+          console.log(error)
+          showError();
+        } 
+         
         }
         
         const saveBtn3= () => {
+          try{
             const subscriber = db.collection("live_result").doc("number3").update({
                 name: name3, 
                 number: number3
               })
               getUser();
               editSection3();
+              showSuccess();
           return () => subscriber();
+           }
+        catch(error){
+          console.log(error)
+          showError();
+        } 
+         
         }
         
         

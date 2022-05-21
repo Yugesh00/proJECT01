@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import {BrowserRouter as Router, Route, Link, Redirect   } from "react-router-dom";
 import audio from '../assests/onclick.mp3';
-import { Tabs, Button,  Row, Col, Checkbox, Spin  } from 'antd';
+import {notification, Tabs, Button,  Row, Col, Checkbox, Spin  } from 'antd';
 import LuckyNumber from "./admin/luckyNumber";
 import LiveResult from "./admin/liveResult";
 import LiveMarket from "./admin/liveMarket";
@@ -37,9 +37,17 @@ const Admin = () =>{
         
       }
     }
-    
+    const showSuccess = () => {
+      notification.success({message:'Logged Out Successfully!!'});
+    };
+
+    const showError = () => {
+      notification.error({message:'Failed to Save!!'});
+    };
+
     const logout = () => {
       localStorage.setItem('token', '');
+      showSuccess();
       setLoading2(true);
     }
    

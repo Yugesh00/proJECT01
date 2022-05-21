@@ -4,13 +4,18 @@ import 'mdbreact/dist/css/mdb.css';
 import { MDBBtn } from "mdbreact";
 import  { Redirect } from 'react-router-dom'
 import audio from '../assests/onclick.mp3';
-import { Tabs, Row, Col, Input, Spin  } from 'antd'; 
+import {notification, Tabs, Row, Col, Input, Spin  } from 'antd'; 
 import './table.css';
 import firebase from "./firebase";
  
 const db = firebase;
 
- 
+const success = () => {
+  notification.success('This is a success message');
+};
+
+
+
 const Login = () => {
     const [error, setError] = useState(false)
     const [email, setEmail] = useState("")
@@ -20,7 +25,10 @@ const Login = () => {
     const [loading, setLoading] = useState(true);
     const [loading1, setLoading1] = useState(false);
 
-    
+    const showError = () => {
+      notification.error({message:'Wrong Credentials!!'});
+    };
+
     useEffect(() => {
         getUser()
       }, [loading]);  
@@ -50,6 +58,9 @@ const Login = () => {
             if(email1 === email && password1 === password){
                 localStorage.setItem('token', 'this_is_the_token');
                 setLoading1(true);
+            }
+            else{
+              showError();
             }
     }
 
