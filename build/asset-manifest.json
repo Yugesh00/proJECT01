@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.04cc83d6.chunk.css",
+    "main.js": "/static/js/main.dda6c812.chunk.js",
+    "main.js.map": "/static/js/main.dda6c812.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.db4fd417.js",
+    "runtime-main.js.map": "/static/js/runtime-main.db4fd417.js.map",
+    "static/css/2.825baf29.chunk.css": "/static/css/2.825baf29.chunk.css",
+    "static/js/2.8e8baa91.chunk.js": "/static/js/2.8e8baa91.chunk.js",
+    "static/js/2.8e8baa91.chunk.js.map": "/static/js/2.8e8baa91.chunk.js.map",
+    "static/js/3.b7df7263.chunk.js": "/static/js/3.b7df7263.chunk.js",
+    "static/js/3.b7df7263.chunk.js.map": "/static/js/3.b7df7263.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.825baf29.chunk.css.map": "/static/css/2.825baf29.chunk.css.map",
+    "static/css/main.04cc83d6.chunk.css.map": "/static/css/main.04cc83d6.chunk.css.map",
+    "static/js/2.8e8baa91.chunk.js.LICENSE.txt": "/static/js/2.8e8baa91.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/static/media/arrow_right.f7c6ac6d.svg",
+    "static/media/onclick.0ff4ea85.mp3": "/static/media/onclick.0ff4ea85.mp3",
+    "static/media/pslLogo1.2ba7b798.png": "/static/media/pslLogo1.2ba7b798.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db4fd417.js",
+    "static/css/2.825baf29.chunk.css",
+    "static/js/2.8e8baa91.chunk.js",
+    "static/css/main.04cc83d6.chunk.css",
+    "static/js/main.dda6c812.chunk.js"
+  ]
+}
