@@ -28,10 +28,37 @@ import milanNightj from "./components/JodiChart/milanNight"
 import milanNightp from "./components/PanelChart/milanNight"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import Login from './components/login'
-import {BrowserRouter as Router, Route } from "react-router-dom";
+import ScrollToTopRoute from './ScrollToTop';
+import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {Helmet} from "react-helmet";
+
 class App extends Component {
   render() {
   return (
+    <>
+    <Helmet>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>SATTA BAZAR | SATTA MATKA | KALYAN MATKA | MATKA RESULT | MATKA | SATTA</title>
+     <meta name="Description" content="SATTABJAR - SATTA MATKA | KALYAN | KALYAN MATKA NUMBER | MATKA RESULT | WWW.MATKA.COM | SATTAMATKA.COM |KALYAN MAIN MATKA TIPS | TODAY MATKA LUCKY NUMBER | SATTA NUMBER | SATTAMATKA CHART | KALYAN FAST RESULT | ONLINE MATKA SATTA RESULTS | INDIAN MATKA | SATTA KALYAN | MADHUR MATKA" />
+     <meta name="Keywords" content="Satta bazar, Sattabjar, Satta matka, kalyan, matka result, kalyan matka, kalyan, matka.com, sattamatka.com, matka tips, today satta number, matka chart, indian matka, satta chart, madhur matka, aaj ka satta" />
+     <link rel="canonical" href="https://sattabjar.com" />
+     <meta http-equiv="refresh" content="900" />
+     <meta name="google" content="notranslate" />
+     <meta http-equiv="pragma" content="no-cache"/>
+     <meta name="google-site-verification" content="rp6W1xafL6sqKiIvmj0ndeLLFF7OfXPslrWxXCfFycU" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+     <meta content="yes" name="apple-mobile-web-app-capable"/>
+     <meta content="yes" name="apple-touch-fullscreen"/>
+     <meta name="Robots" content="index, follow"/>
+     <meta name="author" content="sattabajr"/>
+     <meta name="copyright" content="sattabjar net satta matka" />
+     <meta property="og:type" content="website"/>
+     <meta property="og:title" content="Satta Matka"/>
+     <meta property="og:description" content="SattaMatka"/>
+     <meta property="og:url" content="https://sattabjar.com/"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </Helmet>
     <div className="App">
        <header className="App-header ">
       <div className='card  headSection'>
@@ -47,35 +74,38 @@ class App extends Component {
          </marquee> 
       </div>
       
-      <Router basename={process.env.REACT_APP_BASENAME || ""}>
-    <div>
-    <Route exact path={["/","/main"]} component={Main}/>
-    <Route exact path={["/login"]} component={Login}/>
-    <Route exact path={"/selection"} component={Type}/>
-    <Route exact path={"/user"} component={GetUser}/> 
-    <Route exact path={"/admin"} component={Admin}/> 
-    <Route exact path={"/PanelChart/kalyan"} component={kalyanp}/>
-    <Route exact path={"/JodiChart/kalyan"} component={kalyanj}/>
-    <Route exact path={"/PanelChart/timeBazar"} component={timeBazarp}/>
-    <Route exact path={"/JodiChart/timeBazar"} component={timeBazarj}/>
-    <Route exact path={"/PanelChart/kamalDay"} component={kamalDayp}/>
-    <Route exact path={"/JodiChart/kamalDay"} component={kamalDayj}/>
-    <Route exact path={"/PanelChart/kamalNight"} component={kamalNightp}/>
-    <Route exact path={"/JodiChart/kamalNight"} component={kamalNightj}/>
-    <Route exact path={"/PanelChart/rajdhaniNight"} component={rajdhaniNightp}/>
-    <Route exact path={"/JodiChart/rajdhaniNight"} component={rajdhaniNightj}/>
-    <Route exact path={"/PanelChart/rajdhaniDay"} component={rajdhaniDayp}/>
-    <Route exact path={"/JodiChart/rajdhaniDay"} component={rajdhaniDayj}/>
-    <Route exact path={"/PanelChart/mainBazar"} component={mainBazarp}/>
-    <Route exact path={"/JodiChart/mainBazar"} component={mainBazarj}/>
-    <Route exact path={"/PanelChart/milanDay"} component={milanDayp}/>
-    <Route exact path={"/JodiChart/milanDay"} component={milanDayj}/>
-    <Route exact path={"/PanelChart/milanNight"} component={milanNightp}/>
-    <Route exact path={"/JodiChart/milanNight"} component={milanNightj}/>    
+   <Router basename={process.env.REACT_APP_BASENAME || ""}>
+    <div className="header" ref={(node) => this.setWrapperRef = node}> 
+    <Switch>
+    <ScrollToTopRoute exact path={["/","/main"]} component={Main}/>
+    <ScrollToTopRoute exact path={["/login"]} component={Login}/>
+    <ScrollToTopRoute exact path={"/selection"} component={Type}/>
+    <ScrollToTopRoute exact path={"/user"} component={GetUser}/> 
+    <ScrollToTopRoute exact path={"/admin"} component={Admin}/> 
+    <ScrollToTopRoute exact path={"/PanelChart/kalyan"} component={kalyanp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/kalyan"} component={kalyanj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/timeBazar"} component={timeBazarp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/timeBazar"} component={timeBazarj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/kamalDay"} component={kamalDayp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/kamalDay"} component={kamalDayj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/kamalNight"} component={kamalNightp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/kamalNight"} component={kamalNightj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/rajdhaniNight"} component={rajdhaniNightp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/rajdhaniNight"} component={rajdhaniNightj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/rajdhaniDay"} component={rajdhaniDayp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/rajdhaniDay"} component={rajdhaniDayj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/mainBazar"} component={mainBazarp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/mainBazar"} component={mainBazarj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/milanDay"} component={milanDayp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/milanDay"} component={milanDayj}/>
+    <ScrollToTopRoute exact path={"/PanelChart/milanNight"} component={milanNightp}/>
+    <ScrollToTopRoute exact path={"/JodiChart/milanNight"} component={milanNightj}/>    
+    </Switch>  
     </div>
     </Router> 
      </header> 
     </div>
+    </>
   );
   }
 }

@@ -9,16 +9,38 @@ import './table.css';
 import LuckyNumber from './admin/luckyNumberMain';
 import LiveResult from './admin/liveResultMain';
 import DisplayChart from './admin/chartsDisplay';
+import {Helmet} from "react-helmet";
 
 const { TabPane } = Tabs;
 
 const Main = () => {
- 
-  const Play = () => {
-    new Audio(audio).play();
-  }
 
   return (
+     <>
+     <Helmet>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>SATTA BAZAR | SATTA MATKA | KALYAN MATKA | MATKA RESULT | MATKA | SATTA</title>
+      <meta name="Description" content="SATTABJAR - SATTA MATKA | KALYAN | KALYAN MATKA NUMBER | MATKA RESULT | WWW.MATKA.COM | SATTAMATKA.COM |KALYAN MAIN MATKA TIPS | TODAY MATKA LUCKY NUMBER | SATTA NUMBER | SATTAMATKA CHART | KALYAN FAST RESULT | ONLINE MATKA SATTA RESULTS | INDIAN MATKA | SATTA KALYAN | MADHUR MATKA" />
+      <meta name="Keywords" content="Satta bazar, Sattabjar, Satta matka, kalyan, matka result, kalyan matka, kalyan, matka.com, sattamatka.com, matka tips, today satta number, matka chart, indian matka, satta chart, madhur matka, aaj ka satta" />
+      <link rel="canonical" href="https://sattabjar.com" />
+      <meta http-equiv="refresh" content="900" />
+      <meta name="google" content="notranslate" />
+      <meta http-equiv="pragma" content="no-cache"/>
+      <meta name="google-site-verification" content="rp6W1xafL6sqKiIvmj0ndeLLFF7OfXPslrWxXCfFycU" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta content="yes" name="apple-mobile-web-app-capable"/>
+      <meta content="yes" name="apple-touch-fullscreen"/>
+      <meta name="Robots" content="index, follow"/>
+      <meta name="author" content="sattabajr"/>
+      <meta name="copyright" content="sattabjar net satta matka" />
+      <meta property="og:type" content="website"/>
+      <meta property="og:title" content="Satta Matka"/>
+      <meta property="og:description" content="SattaMatka"/>
+      <meta property="og:url" content="https://sattabjar.com/"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     </Helmet>
+
     <div className="App">  
      
 
@@ -147,6 +169,7 @@ const Main = () => {
         </button>
         </Link>  
      </div>
+     </>
   );
 }
 
