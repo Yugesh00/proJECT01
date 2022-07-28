@@ -85,7 +85,7 @@ const { TabPane } = Tabs;
                     updatedList.push(item);
                   }
                 });  
-                 
+                 console.log("updated.......",updatedList)
                 setList(updatedList)
                 setLoading(false);
               });
