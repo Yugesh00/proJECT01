@@ -39,7 +39,7 @@ const { TabPane } = Tabs;
                     key: doc.id, 
                   });
                 });
-                const updatedList = [];
+                var updatedList = [];
                 updatedList = getPostsFromFirebase.sort((a, b) => a.position - b.position);
                  console.log("updated.......",updatedList)
                 setList(updatedList)
