@@ -97,20 +97,20 @@ const Main = () => {
             <p><Link to="./JodiChart/milanDay"> Milan Day</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./JodiChart/kalyan"> Kalyan </Link></p> 
-            </Col>
-            <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./JodiChart/milanNight"> Milan Night </Link></p> 
+            <p><Link to="./JodiChart/kamalDay"> Kamal Day </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./JodiChart/rajdhaniDay"> Rajdhani Day </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./JodiChart/rajdhaniNight"> Rajdhani Night</Link> </p> 
+            <p><Link to="./JodiChart/kalyan"> Kalyan </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./JodiChart/kamalDay"> Kamal Day </Link></p> 
-            </Col>
+            <p><Link to="./JodiChart/milanNight"> Milan Night </Link></p> 
+            </Col> 
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./JodiChart/rajdhaniNight"> Rajdhani Night</Link> </p> 
+            </Col> 
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./JodiChart/kamalNight"> Kamal Night</Link> </p> 
             </Col>
@@ -137,20 +137,20 @@ const Main = () => {
             <p><Link to="./PanelChart/milanDay"> Milan Day</Link> </p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./PanelChart/kalyan"> Kalyan </Link></p> 
-            </Col>
-            <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./PanelChart/milanNight"> Milan Night </Link></p> 
+            <p><Link to="./PanelChart/kamalDay"> Kamal Day </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./PanelChart/rajdhaniDay"> Rajdhani Day </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./PanelChart/rajdhaniNight"> Rajdhani Night</Link> </p> 
+            <p><Link to="./PanelChart/kalyan"> Kalyan </Link></p> 
             </Col>
             <Col className='liveResultSubSection bottomPad' span={24}>
-            <p><Link to="./PanelChart/kamalDay"> Kamal Day </Link></p> 
-            </Col>
+            <p><Link to="./PanelChart/milanNight"> Milan Night </Link></p> 
+            </Col> 
+            <Col className='liveResultSubSection bottomPad' span={24}>
+            <p><Link to="./PanelChart/rajdhaniNight"> Rajdhani Night</Link> </p> 
+            </Col> 
             <Col className='liveResultSubSection bottomPad' span={24}>
             <p><Link to="./PanelChart/kamalNight"> Kamal Night</Link> </p> 
             </Col>
