@@ -44,31 +44,48 @@ const { TabPane } = Tabs;
                   if(item.Name === 'Time Bazar'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Milan Day'){
+                });
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Milan Day'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Kamal Day'){
+                });
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Kamal Day'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Rajdhani Day'){
+                });   
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Rajdhani Day'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Kalyan'){
+                });
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Kalyan'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Milan Night'){
+                });
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Milan Night'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Rajdhani Night'){
+                });
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Rajdhani Night'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Kamal Night'){
+                });
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Kamal Night'){
                     updatedList.push(item);
                   }
-                  else if(item.Name === 'Main Bazar'){
+                });
+                getPostsFromFirebase.forEach((item)=>{
+                  if(item.Name === 'Main Bazar'){
                     updatedList.push(item);
                   }
-              })
+                });  
+                 
                 setList(updatedList)
                 setLoading(false);
               });
