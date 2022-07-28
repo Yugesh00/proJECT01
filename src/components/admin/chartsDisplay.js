@@ -55,29 +55,35 @@ const { TabPane } = Tabs;
   
       {list.map(current => {
         return (  
-            <Row justify="center" align="top" className='liveResultSubSection bottomPad'> 
-        <Col className='' span={8}> 
-              <Link to={current.jodi}>
-                <button type="button"  className='mt-4 refreshBtn'>
-                  <p  style={{fontSize:'12px'}}>
-                    Jodi
-                  </p> 
-                </button>
-              </Link>
+        
+        <Row  justify="center" align="top" 
+        className={
+                    "liveResultSubSection bottomPad " +
+                    (current.position === 5 ? "color" : "") +
+                    (current.position === 9 ? "color" : "")  
+                  }> 
+           <Col className='' span={8}> 
+                <Link to={current.jodi}>
+                  <button type="button"  className='mt-4 refreshBtn'>
+                    <p  style={{fontSize:'12px'}}>
+                      Jodi
+                    </p> 
+                  </button>
+                </Link>
+              </Col>
+            <Col className='' span={8}>
+                <p>  {current.Name} </p>
+                <p> {current.number} </p>  
+                <p>{current.Date}</p>
             </Col>
-          <Col className='' span={8}>
-              <p>  {current.Name} </p>
-              <p> {current.number} </p>  
-              <p>{current.Date}</p>
-          </Col>
-          <Col className='' span={8}>  
-          <Link to={current.panel}><button type="button"  className='mt-4 refreshBtn'>
-              <p  style={{fontSize:'12px'}}>
-              Panel
-              </p> 
-           </button></Link>
-          </Col>
-        </Row>
+            <Col className='' span={8}>  
+            <Link to={current.panel}><button type="button"  className='mt-4 refreshBtn'>
+                <p  style={{fontSize:'12px'}}>
+                Panel
+                </p> 
+            </button></Link>
+            </Col>
+         </Row>
         );
       })}
         </>
