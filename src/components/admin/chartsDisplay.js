@@ -39,52 +39,8 @@ const { TabPane } = Tabs;
                     key: doc.id, 
                   });
                 });
-                const updatedList = []
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Time Bazar'){
-                    updatedList.push(item);
-                  }
-                });
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Milan Day'){
-                    updatedList.push(item);
-                  }
-                });
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Kamal Day'){
-                    updatedList.push(item);
-                  }
-                });   
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Rajdhani Day'){
-                    updatedList.push(item);
-                  }
-                });
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Kalyan'){
-                    updatedList.push(item);
-                  }
-                });
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Milan Night'){
-                    updatedList.push(item);
-                  }
-                });
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Rajdhani Night'){
-                    updatedList.push(item);
-                  }
-                });
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Kamal Night'){
-                    updatedList.push(item);
-                  }
-                });
-                getPostsFromFirebase.forEach((item)=>{
-                  if(item.Name === 'Main Bazar'){
-                    updatedList.push(item);
-                  }
-                });  
+                const updatedList = [];
+                updatedList = getPostsFromFirebase.sort((a, b) => a.position - b.position);
                  console.log("updated.......",updatedList)
                 setList(updatedList)
                 setLoading(false);
