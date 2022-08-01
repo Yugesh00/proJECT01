@@ -18,6 +18,7 @@ const LiveResult = () =>{
     const [show1, setShow1] = useState(false)
     const [show2, setShow2] = useState(false)
     const [show3, setShow3] = useState(false)
+    const [showText, setText] = useState(false)
 
     const [disabled4, setDisabled4] = useState(true)
     const [disabled5, setDisabled5] = useState(true)
@@ -750,6 +751,99 @@ const editSection8 = () => {
     return <Spin className="mt-5" size="large" />
      }
 
+     const validateNumber = (value, num) => {
+      const validStr = /^[0-9]{3}\-[0-9]{2}\-[0-9]{3}?$/;
+      if(!validStr.test(value)){
+        setText(true);
+        if(num === 1){
+          setShow1(false);
+        }
+        else if(num === 2){
+          setShow2(false);
+        }
+        else if(num === 3){
+          setShow3(false);
+        }
+        else if(num === 4){
+          setShow4(false);
+        }
+        else if(num === 5){
+          setShow5(false);
+        }
+        else if(num === 6){
+          setShow6(false);
+        }
+        else if(num === 7){
+          setShow7(false);
+        }
+        else if(num === 8){
+          setShow8(false);
+        }
+        else if(num === 9){
+          setShow9(false);
+        }
+      }  
+      if(validStr.test(value)){
+        setText(false);
+        
+        if(num === 1){
+          setShow1(true);
+        }
+        else if(num === 2){
+          setShow2(true);
+        }
+        else if(num === 3){
+          setShow3(true);
+        }
+        else if(num === 4){
+          setShow4(true);
+        }
+        else if(num === 5){
+          setShow5(true);
+        }
+        else if(num === 6){
+          setShow6(true);
+        }
+        else if(num === 7){
+          setShow7(true);
+        }
+        else if(num === 8){
+          setShow8(true);
+        }
+        else if(num === 9){
+          setShow9(true);
+        }
+      }
+
+      if(num === 1){
+        setNumber1(value);
+      }
+      else if(num === 2){
+        setNumber2(value);
+      }
+      else if(num === 3){
+        setNumber3(value);
+      }
+      else if(num === 4){
+        setNumber4(value);
+      }
+      else if(num === 5){
+        setNumber5(value);
+      }
+      else if(num === 6){
+        setNumber6(value);
+      }
+      else if(num === 7){
+        setNumber7(value);
+      }
+      else if(num === 8){
+        setNumber8(value);
+      }
+      else if(num === 9){
+        setNumber9(value);
+      }
+     }
+
     return ( 
         <>
  <Row>
@@ -758,9 +852,12 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName1(e.target.value)} className="" disabled={true} placeholder="Name" value="TIME BAZAR"/>
     <label className="float-left inputCs">Lucky Number </label>
-    <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={disabled1} placeholder="Number" value={number1}/>
+    {(!show1 && showText && !disabled1) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) => validateNumber(e.target.value, 1)} className="" disabled={disabled1} placeholder="Number" value={number1}/>
+      
     <label className="float-left inputCs">Timing </label>
-    <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="01:00 PM   02:00 PM"/>
+    <Input onChange={(e) => validateNumber(e.target.value)} className="" disabled={true} placeholder="Timing" value="01:00 PM   02:00 PM"/>
        
     <button type="button" onClick={editSection1} className='editBtn'>
          <p  style={{fontSize:'12px'}}>
@@ -778,7 +875,9 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName2(e.target.value)} className="" disabled={true} placeholder={"Name"} value="MILAN DAY"/>
     <label className="float-left inputCs">Lucky Number  </label>
-    <Input onChange={(e) => setNumber2(e.target.value)} className="" disabled={disabled2} placeholder="Number"  value={number2} />
+    {(!show2 && showText && !disabled2) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) =>  validateNumber(e.target.value, 2)} className="" disabled={disabled2} placeholder="Number"  value={number2} />
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="03:05 PM   05:05 PM"/>
        
@@ -798,7 +897,10 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName3(e.target.value)} className="" disabled={true} placeholder={"Name"} value="KALYAN"/>
     <label className="float-left inputCs">Lucky Number  </label>
-    <Input onChange={(e) => setNumber3(e.target.value)} className="" disabled={disabled3} placeholder="Number"  value={number3} />
+
+    {(!show3 && showText && !disabled3) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+        <Input onChange={(e) =>  validateNumber(e.target.value, 3)} className="" disabled={disabled3} placeholder="Number"  value={number3} />
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="04:10 PM   06:10 PM"/>
        
@@ -822,7 +924,9 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName4(e.target.value)} className="" disabled={true} placeholder="Name" value="MILAN NIGHT"/>
     <label className="float-left inputCs">Lucky Number </label>
-    <Input onChange={(e) => setNumber4(e.target.value)} className="" disabled={disabled4} placeholder="Number" value={number4}/>
+    {(!show4 && showText && !disabled4) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) =>  validateNumber(e.target.value, 4)} className="" disabled={disabled4} placeholder="Number" value={number4}/>
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="09:00 PM   11:00 PM"/>
        
@@ -832,7 +936,7 @@ const editSection8 = () => {
          </p> 
       </button>
       {show4 && 
-      <button onClick={saveBtn4} disabled={disabled1} type="button"  className='saveBtn'>
+      <button onClick={saveBtn4} type="button"  className='saveBtn'>
          <p  style={{fontSize:'12px'}}>
          Save
          </p> 
@@ -842,7 +946,9 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName5(e.target.value)} className="" disabled={true} placeholder={"Name"} value="RAJDHANI NIGHT"/>
     <label className="float-left inputCs">Lucky Number </label>
-    <Input onChange={(e) => setNumber5(e.target.value)} className="" disabled={disabled5} placeholder="Number"  value={number5} />
+    {(!show5 && showText && !disabled5) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) =>  validateNumber(e.target.value, 5)} className="" disabled={disabled5} placeholder="Number"  value={number5} />
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="09:30 PM   11:45 PM"/>
        
@@ -862,7 +968,9 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName6(e.target.value)} className="" disabled={true} placeholder={"Name"} value="RAJDHANI DAY"/>
     <label className="float-left inputCs">Lucky Number </label>
-    <Input onChange={(e) => setNumber6(e.target.value)} className="" disabled={disabled6} placeholder="Number"  value={number6} />
+    {(!show6 && showText && !disabled6) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) =>  validateNumber(e.target.value, 6)} className="" disabled={disabled6} placeholder="Number"  value={number6} />
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="03:05 PM   05:05 PM"/>
        
@@ -886,7 +994,9 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName7(e.target.value)} className="" disabled={true} placeholder="Name" value="KAMAL DAY"/>
     <label className="float-left inputCs">Lucky Number </label>
-    <Input onChange={(e) => setNumber7(e.target.value)} className="" disabled={disabled7} placeholder="Number" value={number7}/>
+    {(!show7 && showText && !disabled7) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) =>  validateNumber(e.target.value, 7)} className="" disabled={disabled7} placeholder="Number" value={number7}/>
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="01:45 PM   02:45 PM"/>
        
@@ -906,7 +1016,9 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName8(e.target.value)} className="" disabled={true} placeholder={"Name"} value="KAMAL NIGHT"/>
     <label className="float-left inputCs">Lucky Number  </label>
-    <Input onChange={(e) => setNumber8(e.target.value)} className="" disabled={disabled8} placeholder="Number"  value={number8} />
+    {(!show8 && showText && !disabled7) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) =>  validateNumber(e.target.value, 8)} className="" disabled={disabled8} placeholder="Number"  value={number8} />
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="09:30 PM   11:00 PM"/>
        
@@ -926,7 +1038,9 @@ const editSection8 = () => {
     <label className="float-left inputCs">Market</label>
     <Input onChange={(e) => setName9(e.target.value)} className="" disabled={true} placeholder={"Name"} value="MAIN BAZAR"/>
     <label className="float-left inputCs">Lucky Number </label>
-    <Input onChange={(e) => setNumber9(e.target.value)} className="" disabled={disabled9} placeholder="Number"  value={number9} />
+    {(!show9 && showText && !disabled9) &&
+    <label style={{fontSize : '13px', color:'red'}} className="float-right inputCs">Correct format- 111-22-333 </label>}
+    <Input onChange={(e) =>  validateNumber(e.target.value, 9)} className="" disabled={disabled9} placeholder="Number"  value={number9} />
     <label className="float-left inputCs">Timing </label>
     <Input onChange={(e) => setNumber1(e.target.value)} className="" disabled={true} placeholder="Timing" value="09:40 PM   12:05 AM"/>
        
